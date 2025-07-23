@@ -104,12 +104,52 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Independent Study Project" startnode="40" creator="Twine" creator-version="2.10.0" format="SugarCube" format-version="2.37.3" ifid="020CDC3D-467D-4D4D-AF71-ABBB48271F23" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Access" tags="" position="1375,250" size="100,100">&lt;&lt;silently&gt;&gt;&lt;&lt;set $seenAccess = true&gt;&gt;&lt;&lt;/silently&gt;&gt;
+	<tw-storydata name="Independent Study Project" startnode="38" creator="Twine" creator-version="2.10.0" format="SugarCube" format-version="2.37.3" ifid="020CDC3D-467D-4D4D-AF71-ABBB48271F23" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.garp-accountability {
+  color: #D7263D;
+  font-weight: bold;
+}
+
+.garp-integrity {
+  color: #1B9AAA;
+  font-weight: bold;
+}
+
+.garp-protection {
+  color: #9BC53D;
+  font-weight: bold;
+}
+
+.garp-compliance {
+  color: #E55934;
+  font-weight: bold;
+}
+
+.garp-availability {
+  color: #5BC0EB;
+  font-weight: bold;
+}
+
+.garp-retention {
+  color: #FFB400;
+  font-weight: bold;
+}
+
+.garp-disposition {
+  color: #A07178;
+  font-weight: bold;
+}
+
+.garp-transparency {
+  color: #6C6EA0;
+  font-weight: bold;
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Access" tags="" position="1375,250" size="100,100">&lt;&lt;silently&gt;&gt;&lt;&lt;set $seenAccess = true&gt;&gt;&lt;&lt;/silently&gt;&gt;
 This system doesn’t enforce any access controls. No login screen. No user profiles. You’re in because you touched it.  
 There’s no guarantee that future access won’t be anonymous, untraceable, and completely unrestricted. Which means anyone—from a freight runner to a bored teenager—could overwrite, delete, or create records without authorization.  
-&lt;em&gt;GARP themes to consider: Protection, Accountability, Compliance&lt;/em&gt;  
+&lt;strong&gt;GARP themes to consider:&lt;/strong&gt; &lt;span class=&quot;garp-protection&quot;&gt;Protection&lt;/span&gt;, &lt;span class=&quot;garp-accountability&quot;&gt;Accountability&lt;/span&gt;, &lt;span class=&quot;garp-compliance&quot;&gt;Compliance&lt;/span&gt;
 
-[[Back|Approach the console]]</tw-passagedata><tw-passagedata pid="2" name="An example for Earthlings" tags="" position="550,950" size="100,100">&lt;strong&gt;An example for Earthlings&lt;/strong&gt;
+[[Back|Approach the console]]
+</tw-passagedata><tw-passagedata pid="2" name="An example for Earthlings" tags="" position="550,950" size="100,100">&lt;strong&gt;An example for Earthlings&lt;/strong&gt;
 Remember performance reviews? Of course you do.  
 The document you received didn’t just vanish—it lived a whole records lifecycle.  
 Match each event below to the correct stage in that lifecycle, and trace the journey of that cursed little file.
@@ -180,13 +220,16 @@ It will not be clean. It will not be verifiable. But it will be received.
 
 &lt;&lt;if $seenAudit and $seenStandards and $seenDysentery and $seenAccess and $seenHardware&gt;&gt;  
 [[Make a decision|GARP_Scenario1_Decision]]  
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Audit" tags="" position="1125,200" size="100,100">&lt;&lt;silently&gt;&gt;&lt;&lt;set $seenAudit = true&gt;&gt;&lt;&lt;/silently&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Audit" tags="" position="1150,200" size="100,100">&lt;&lt;silently&gt;&gt;&lt;&lt;set $seenAudit = true&gt;&gt;&lt;&lt;/silently&gt;&gt;
 This version of Choral OS doesn’t maintain a reliable audit trail. There’s no record of who made changes, what changed, or when it happened. No timestamps. No logs. Just overwritten data and vibes.  
-That means if someone falsifies a report, there’s no way to prove it. If someone deletes a shipping log? Gone without a trace. It’s not just bad—it’s legally unusable in most sectors. 
-&lt;em&gt;GARP themes to consider: Accountability, Integrity, Transparency, (lack of) 
-Compliance&lt;/em&gt;  
+That means if someone falsifies a report, there’s no way to prove it. If someone deletes a shipping log? Gone without a trace. It’s not just bad—it’s legally unusable in most sectors.  
+&lt;strong&gt;GARP themes to consider:&lt;/strong&gt; &lt;span class=&quot;garp-accountability&quot;&gt;Accountability&lt;/span&gt;, &lt;span class=&quot;garp-integrity&quot;&gt;Integrity&lt;/span&gt;, &lt;span class=&quot;garp-transparency&quot;&gt;Transparency&lt;/span&gt;, 
+&lt;span class=&quot;garp-noncompliance&quot;&gt;Compliance (missing)&lt;/span&gt;
 
-[[Back|Approach the console]]</tw-passagedata><tw-passagedata pid="5" name="Bridge01" tags="" position="975,125" size="100,100">Suzamen wasn’t worth the paperwork—until trade started slipping through its back channels, dodging Choral tariffs on the way to richer ports. Now, all of a sudden, there’s interest. Suzamen needs to be brought back into “formal compliance.” It needs reconnection. Documentation. Taxable legitimacy.
+[[Back|Approach the console]]
+</tw-passagedata><tw-passagedata pid="5" name="Mission Briefing" tags="" position="975,125" size="100,100">&lt;strong&gt;Restoring Suzamen&lt;/strong&gt;
+
+Suzamen wasn’t worth the paperwork—until trade started slipping through its back channels, dodging Choral tariffs on the way to richer ports. Now, all of a sudden, there’s interest. Suzamen needs to be brought back into “formal compliance.” It needs reconnection. Documentation. Taxable legitimacy.
 
 That’s where you come in. Not because you’re fully certified or the best—because you&#39;re not, and that&#39;s okay. You&#39;re available, quick on your feet, and the Choral assumes a rookie record manager can&#39;t possibly wreck anything that wasn’t already broken--and they consider Suzamen to be in utter shambles.
 
@@ -379,9 +422,9 @@ A placeholder record may cause:
 &lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Dual Submit" tags="" position="500,350" size="100,100"></tw-passagedata><tw-passagedata pid="15" name="Dysentery" tags="" position="1275,200" size="100,100">&lt;&lt;silently&gt;&gt;&lt;&lt;set $seenDysentery = true&gt;&gt;&lt;&lt;/silently&gt;&gt;
 There’s no graceful way to put this: the system is dying from the inside. Memory errors. Phantom shutdowns. The occasional screaming noise from the internal speaker.  
 It’s unstable enough to corrupt data during entry, drop packets mid-transfer, or even auto-wipe when it crashes. You could lose records without even realizing it.  
-&lt;em&gt;GARP themes to consider: Protection, Availability, Integrity&lt;/em&gt;  
-
-[[Back|Approach the console]]</tw-passagedata><tw-passagedata pid="16" name="Ela Memory" tags="" position="225,175" size="100,100">Ela unfolds a laminated scrap showing part of a grid layout—Block 12, Block 13. Faded notes beside each: “council housing,” “cistern,” “old scan booth.”
+&lt;span class=&quot;garp-protection&quot;&gt;Protection&lt;/span&gt;, &lt;span class=&quot;garp-availability&quot;&gt;Availability&lt;/span&gt;, and &lt;span class=&quot;garp-integrity&quot;&gt;Integrity&lt;/span&gt; are all at risk here.
+[[Back|Approach the console]]
+</tw-passagedata><tw-passagedata pid="16" name="Ela Memory" tags="" position="225,175" size="100,100">Ela unfolds a laminated scrap showing part of a grid layout—Block 12, Block 13. Faded notes beside each: “council housing,” “cistern,” “old scan booth.”
 
 She points out each place in the ruins. &quot;My brother ran the ID station. We had power &#39;til the storm hit.&quot;
 
@@ -394,59 +437,45 @@ The logs are worse than expected—fragmented, mislabeled, decaying by the byte.
 
 [[Tag records for sync|PatchSync_Select]]
 
-</tw-passagedata><tw-passagedata pid="18" name="GARP1_Quarantine" tags="" position="1675,475" size="100,100">You hold your portable over the terminal and start a secure scan—then immediately shut it down. The logs are compromised, and the hardware damage is worse up close: rusted port seams, burst capacitors, faint mycelial growth curling under the panel edges.
-
-You tag the terminal as unreliable in your report and pivot. Using your portable, you begin collecting alt-source records: damp shipping manifests, salvaged ledgers, and oral confirmations with names, dates, and locations. Field data, loosely structured—but firsthand.
-&lt;silently&gt;&lt;&lt;set $usedQuarantinePortable to true&gt;&gt;&lt;/silently&gt;
-[[Decide what to collect|Quarantine_Selection
-
-You tagged every warning sign.
-No audit trail. No access control. No validation. No confidence.
-The system’s been bleeding static into the dark for over a century—and now it wants you to amplify it.
-You don’t.
-You isolate the terminal. You blacklist the local node. You tag the packet as contaminated, unverified, and potentially harmful.
-No sync. No relay. No revisionist history.
-If Suzamen is going to speak again, it will not be through this thing.
-&lt;silently&gt;&lt;&lt;set $usedQuarantinePortable to true&gt;&gt;
-&lt;&lt;set $garpProtection = true&gt;&gt;
-&lt;&lt;set $garpIntegrity = true&gt;&gt;
-&lt;&lt;set $quarantineUsed = true&gt;&gt;&lt;/silently&gt;
-[[Continue|GARP1_Bridge]]
-</tw-passagedata><tw-passagedata pid="19" name="GARP1_UseAnyway" tags="" position="1525,450" size="100,100">You push the reactivation file—Suzamen Port ID, a timestamp, your portable’s credentials, and the thinnest possible confirmation that someone is still down here and breathing.
+</tw-passagedata><tw-passagedata pid="18" name="GARP1_UseAnyway" tags="" position="1525,450" size="100,100">You push the reactivation file—Suzamen Port ID, a timestamp, your portable’s credentials, and the thinnest possible confirmation that someone is still down here and breathing.
 
 The console doesn’t care. It was built to transmit, not think.
 
 And Choral? They don’t need the data to be clean. They just need a signal strong enough to trip the relay and open the pipeline. Once that happens, the system kicks in—routing updates, flagging discrepancies, scheduling contact. Presence matters more than accuracy. At least at first.
 
-[[The packet goes through]]</tw-passagedata><tw-passagedata pid="20" name="GARPBridge" tags="" position="1150,875" size="100,100">You’ve seen how a record is supposed to move through a system.&lt;br&gt;
+[[The packet goes through]]</tw-passagedata><tw-passagedata pid="19" name="GARPBridge" tags="" position="1150,825" size="100,100">&lt;strong&gt;Orientation Module 3: GARP (Generally Accepted Recordkeeping Principles)&lt;/strong&gt;
+You’ve seen how a record is supposed to move through a system.&lt;br&gt;
 Now let’s talk about managing records when the system is a mess—half-functional, water-damaged, and probably on fire.
 Good record managers—and good records programs—use something called &lt;strong&gt;GARP&lt;/strong&gt;: the &lt;strong&gt;Generally Accepted Recordkeeping Principles&lt;/strong&gt;, a set of eight standards that help people make smart decisions when the rules get muddy and the stakes are real. 
 
-&lt;strong&gt;Accountability&lt;/strong&gt; – Someone is responsible for the records, start to finish.&lt;br&gt;
-&lt;strong&gt;Integrity&lt;/strong&gt; – Records are accurate and reliable—no gaps, no creative edits.&lt;br&gt;
-&lt;strong&gt;Protection&lt;/strong&gt; – Records are kept safe from damage or misuse.&lt;br&gt;
-&lt;strong&gt;Compliance&lt;/strong&gt; – Records follow the rules: legal, regulatory, and internal.&lt;br&gt;
-&lt;strong&gt;Availability&lt;/strong&gt; – Records can be found and used when needed.&lt;br&gt;
-&lt;strong&gt;Retention&lt;/strong&gt; – Records are kept as long as necessary—and not longer.&lt;br&gt;
-&lt;strong&gt;Disposition&lt;/strong&gt; – Records are disposed of properly: archived or destroyed.&lt;br&gt;
-&lt;strong&gt;Transparency&lt;/strong&gt; – The process is clear, and decisions leave a trail.&lt;br&gt;
-You’ll see these principles in action—sometimes upheld, sometimes mangled. Your job is to spot the difference and try to do better.
+&lt;strong style=&quot;color:#D7263D;&quot;&gt;Accountability&lt;/strong&gt; – Someone is responsible for the records, start to finish.&lt;br&gt;
+&lt;strong style=&quot;color:#1B9AAA;&quot;&gt;Integrity&lt;/strong&gt; – Records are accurate and reliable—no gaps, no creative edits.&lt;br&gt;
+&lt;strong style=&quot;color:#9BC53D;&quot;&gt;Protection&lt;/strong&gt; – Records are kept safe from damage or misuse.&lt;br&gt;
+&lt;strong style=&quot;color:#E55934;&quot;&gt;Compliance&lt;/strong&gt; – Records follow the rules: legal, regulatory, and internal.&lt;br&gt;
+&lt;strong style=&quot;color:#5BC0EB;&quot;&gt;Availability&lt;/strong&gt; – Records can be found and used when needed.&lt;br&gt;
+&lt;strong style=&quot;color:#FFB400;&quot;&gt;Retention&lt;/strong&gt; – Records are kept as long as necessary—and not longer.&lt;br&gt;
+&lt;strong style=&quot;color:#A07178;&quot;&gt;Disposition&lt;/strong&gt; – Records are disposed of properly: archived or destroyed.&lt;br&gt;
+&lt;strong style=&quot;color:#6C6EA0;&quot;&gt;Transparency&lt;/strong&gt; – The process is clear, and decisions leave a trail.&lt;br&gt;
 
-[[Begin GARP Mission|Bridge01]]</tw-passagedata><tw-passagedata pid="21" name="GARP_Scenario1_Decision" tags="" position="1675,300" size="100,100">You’ve assessed the situation. The system is ancient, unstable, and structurally sketchy—but it’s still running.
+You won’t get perfect systems. You’ll get broken tools, weird data, and real-world tradeoffs.Your job is to &lt;strong&gt;work through the mess&lt;/strong&gt;—track what went right, flag what went wrong, and make decisions that hold up when someone checks the record later.
+
+[[Mission Briefing]] </tw-passagedata><tw-passagedata pid="20" name="GARP_Scenario1_Decision" tags="" position="1675,300" size="100,100">You’ve assessed the situation. The system is ancient, unstable, and structurally sketchy—but it’s still running.
 
 What do you want to do?
 
 [[Use the terminal and sync it|GARP1_UseAnyway]]  
-[[Flag the terminal and start collecting new local records|GARP1_Quarantine]]  
-[[Tag risky data and attempt a partial sync|GARP1_PatchSync]]</tw-passagedata><tw-passagedata pid="22" name="Hardware" tags="" position="1500,250" size="100,100">&lt;&lt;silently&gt;&gt;&lt;&lt;set $seenHardware = true&gt;&gt;&lt;&lt;/silently&gt;&gt;
-The console’s screen is cracked. The keyboard sticks. One of the input ports is visibly burned. At one point it displays a potato emoji and then shuts itself off. Vibrant fungal bloom networks run along the wiring and seem to disappear inside the casing.
-Even if the software were pristine (it’s not), this hardware damage could cause key data fields to go unrecorded, inputs to be duplicated or skipped, or entire records to be lost during save.  
-&lt;em&gt;GARP themes to consider: Availability, Integrity, Disposition&lt;/em&gt;
+[[Oh my god, look at the mushrooms!]]  
+[[Tag risky data and attempt a partial sync|GARP1_PatchSync]]</tw-passagedata><tw-passagedata pid="21" name="Hardware" tags="" position="1500,250" size="100,100">&lt;&lt;silently&gt;&gt;&lt;&lt;set $seenHardware = true&gt;&gt;&lt;&lt;/silently&gt;&gt;
 
-[[Back|Approach the console]]</tw-passagedata><tw-passagedata pid="23" name="Image Answer" tags="" position="1025,700" size="100,100">&lt;&lt;silently&gt;&gt;&lt;&lt;set $viewedImage = true&gt;&gt;&lt;&lt;/silently&gt;&gt;
+The console’s screen is cracked. The keyboard sticks. One of the input ports is visibly burned. At one point it displays a potato emoji and then shuts itself off. Vibrant fungal bloom networks run along the wiring and seem to disappear inside the casing.  
+Even if the software were pristine (it’s not), this hardware damage could cause key data fields to go unrecorded, inputs to be duplicated or skipped, or entire records to be lost during save.  
+&lt;strong&gt;GARP themes to consider:&lt;/strong&gt; &lt;span class=&quot;garp-availability&quot;&gt;Availability&lt;/span&gt;, &lt;span class=&quot;garp-integrity&quot;&gt;Integrity&lt;/span&gt;, &lt;span class=&quot;garp-disposition&quot;&gt;Disposition&lt;/span&gt;
+
+[[Back|Approach the console]]
+</tw-passagedata><tw-passagedata pid="22" name="Image Answer" tags="" position="1025,700" size="100,100">&lt;&lt;silently&gt;&gt;&lt;&lt;set $viewedImage = true&gt;&gt;&lt;&lt;/silently&gt;&gt;
 ❌The blurry lunch photo is *probably* not a record—unless it’s being used as documentation. Maybe it proves someone’s location. Maybe it’s evidence of a health violation. Context matters. So does quality. A blurry image might still count if it’s the only surviving proof—but it would be a last resort, not a best practice.
 
-[[Back|What is a record?]]</tw-passagedata><tw-passagedata pid="24" name="Lifecycle Model" tags="" position="500,775" size="100,100">&lt;strong&gt;Orientation Module 2: The Records Lifecycle&lt;/strong&gt;&lt;br&gt;
+[[Back|What is a record?]]</tw-passagedata><tw-passagedata pid="23" name="Lifecycle Model" tags="" position="500,775" size="100,100">&lt;strong&gt;Orientation Module 2: The Records Lifecycle&lt;/strong&gt;&lt;br&gt;
 Every record has a life. It is born (created) or received, it works (used), it retires (stored), and eventually it either dies (destroyed) or becomes immortal (archived)
 &lt;strong&gt;The Four Stages:&lt;/strong&gt;
 &lt;ol&gt;
@@ -455,7 +484,7 @@ Every record has a life. It is born (created) or received, it works (used), it r
   &lt;li&gt;&lt;strong&gt;Storage:&lt;/strong&gt; It’s no longer needed for daily use, but must be kept.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Disposition:&lt;/strong&gt; It’s either destroyed or formally archived.&lt;/li&gt;
 &lt;/ol&gt;
-[[An example for Earthlings]]</tw-passagedata><tw-passagedata pid="25" name="LifecycleQuizResult" tags="" position="700,925" size="100,100">&lt;&lt;if $lifecycleQuizCorrect&gt;&gt;
+[[An example for Earthlings]]</tw-passagedata><tw-passagedata pid="24" name="LifecycleQuizResult" tags="" position="700,925" size="100,100">&lt;&lt;if $lifecycleQuizCorrect&gt;&gt;
 ✅ &lt;strong&gt;You nailed it!&lt;/strong&gt; The record lived a full and proper life.&lt;br&gt;
 &lt;ul&gt;
   &lt;li&gt;📥 Received → &lt;strong&gt;Creation&lt;/strong&gt;&lt;/li&gt;
@@ -475,7 +504,7 @@ Every record has a life. It is born (created) or received, it works (used), it r
   &lt;li&gt;&lt;strong&gt;Disposition:&lt;/strong&gt; Securely destroyed or archived&lt;/li&gt;
 &lt;/ul&gt;
 &lt;&lt;link &quot;Retry&quot;&gt;&gt;&lt;&lt;goto &quot;An example for Earthlings&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="MurraReflectionQ1" tags="" position="175,450" size="100,100">You submitted a reconstruction based on local memory.  
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="MurraReflectionQ1" tags="" position="175,450" size="100,100">You submitted a reconstruction based on local memory.  
 The system accepted it, but flagged a nonstandard format warning.  
 Before you move on, take a moment to reflect on your decision.
 
@@ -492,7 +521,7 @@ Before you move on, take a moment to reflect on your decision.
 
 &lt;&lt;link &quot;Submit&quot;&gt;&gt;
   &lt;&lt;run setup.checkMurraGARPq1()&gt;&gt;
-&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="MurraReviewResult" tags="" position="50,500" size="100,100"></tw-passagedata><tw-passagedata pid="28" name="No" tags="" position="725,325" size="100,100">The woman smiles warmly at you.
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="MurraReviewResult" tags="" position="50,500" size="100,100"></tw-passagedata><tw-passagedata pid="27" name="No" tags="" position="725,325" size="100,100">The woman smiles warmly at you.
 &quot;I&#39;m Key.&quot;
 A machine next to her burps and spits out a rectangular piece of plastic. She offers it to you—then grabs your wrist as you reach for it.
 &quot;Sorry about this,&quot; she says, not sounding sorry at all, and jabs a syringe into your arm.
@@ -507,17 +536,17 @@ Key catches on and slaps the portable into your hand. &quot;I swear, I wasn&#39;
 “Looks official, right? But out here, that’s just backup.”
 She taps your wrist. “The chip runs everything—credentials, access, assignments. We don’t rely on just one format. Physical. Digital. Biometric. It’s all redundant, our records have to survive failure. But you’ll learn more about that in orientation—for which, by the way, you are currently late. Better hurry!&quot; She vaguely points down a hall, &quot;Find the green light door.&quot;
 
-[[Begin Orientation|What is a record?]]</tw-passagedata><tw-passagedata pid="29" name="Payroll Answer" tags="" position="1025,575" size="100,100">&lt;&lt;silently&gt;&gt;&lt;&lt;set $viewedPayroll = true&gt;&gt;&lt;&lt;/silently&gt;&gt;
+[[Begin Orientation|What is a record?]]</tw-passagedata><tw-passagedata pid="28" name="Payroll Answer" tags="" position="1025,575" size="100,100">&lt;&lt;silently&gt;&gt;&lt;&lt;set $viewedPayroll = true&gt;&gt;&lt;&lt;/silently&gt;&gt;
 ✔️This is a record. It documents financial transactions, employee compensation, and organizational obligations. It is subject to strict retention and privacy requirements.
 
-[[Back|What is a record?]]</tw-passagedata><tw-passagedata pid="30" name="Proceed to scanner" tags="" position="850,200" size="100,100">You step onto the scanner.
+[[Back|What is a record?]]</tw-passagedata><tw-passagedata pid="29" name="Proceed to scanner" tags="" position="850,200" size="100,100">You step onto the scanner.
 &quot;Stand in the middle,&quot; a voice says. Drones whirl around you like tiny black crows. One pings off your shoulder.
 &quot;STAY STILL!&quot; barks the intercom. &quot;Or we start over.&quot;
 You shut your eyes and try to ignore the chirps, clicks, and whines—every noise a reminder that you&#39;re being scanned, judged, logged, and processed. After what feels like forever, the drones peel away and dock themselves.
 A young woman steps out from the control bay, tablet in hand, and beckons you to her--she&#39;s standing next to a door, sweet freedom could lie just beyond it!&lt;br&gt; 
 &lt;strong&gt;Would you like to attempt a premature exit from this drudgery?&lt;/strong&gt;
 [[Yes]]
-[[No]]</tw-passagedata><tw-passagedata pid="31" name="Quarantine_Reflection" tags="" position="1275,725" size="100,100">You compile your selections into a tagged quarantine file. It is not complete—but it is intentional.
+[[No]]</tw-passagedata><tw-passagedata pid="30" name="Quarantine_Reflection" tags="" position="1275,725" size="100,100">You compile your selections into a tagged quarantine file. It is not complete—but it is intentional.
 &#39;&#39;Assessment log:&#39;&#39;
 &lt;&lt;set _records = {
   &quot;BenMap&quot;: {
@@ -564,32 +593,7 @@ You preserved insight—but not enough to reconstruct. The gaps remain.&lt;br&gt
 &lt;&lt;set $pickedSurvey = $selectedItems.includes(&quot;Survey&quot;)&gt;&gt;
 &lt;&lt;set $pickedBenMap = $selectedItems.includes(&quot;BenMap&quot;)&gt;&gt;
 &lt;&lt;set $pickedLumi = $selectedItems.includes(&quot;LumiMoss&quot;)&gt;&gt;
-&lt;&lt;set $pickedVoice = $selectedItems.includes(&quot;VoiceStub&quot;)&gt;</tw-passagedata><tw-passagedata pid="32" name="Quarantine_Selection" tags="" position="1675,725" size="100,100">You do not know what this place was doing before the storm. There are no surviving indexes, no schema, and no local staff. Just soaked paper, scuffed tags, and the occasional embedded chip.
-
-Most of it is damp. Some of it’s weird. All of it was once considered worth keeping. In one area of the office you find the items in the following list. &lt;strong&gt;Which do you think you should keep?&lt;/strong&gt;&lt;br&gt;&lt;br&gt;
-
-&lt;form id=&quot;quarantineChecklist&quot;&gt;
-&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;qItem&quot; value=&quot;BenMap&quot;&gt; “Ben’s Fortified Office” (hand-drawn map, annotated with “Ben” four times)&lt;/label&gt;&lt;br&gt;
-&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;qItem&quot; value=&quot;LumiMoss&quot;&gt; Lumi Moss Shipping Manifest (Official cargo log. Temperature-sensitive. Some redactions.)&lt;/label&gt;&lt;br&gt;
-&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;qItem&quot; value=&quot;ElaNote&quot;&gt; Ela’s Gridded Scrap (Housing notes and names. Found with old district roll.)&lt;/label&gt;&lt;br&gt;
-&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;qItem&quot; value=&quot;VoiceStub&quot;&gt; Voice Record Stub (Unreadable chip labeled &#39;Stub.12.44.99&#39;. No metadata.)&lt;/label&gt;&lt;br&gt;
-&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;qItem&quot; value=&quot;Survey&quot;&gt; Pre-Storm Survey Report (Undated, unsigned. Environmental indicators noted.)&lt;/label&gt;
-&lt;/form&gt;&lt;br&gt;
-&lt;button id=&quot;submitSelection&quot;&gt;Submit&lt;/button&gt;
-
-&lt;&lt;script&gt;&gt;
-postdisplay[&quot;quarantineSubmit&quot;] = function () {
-  const button = document.getElementById(&quot;submitSelection&quot;);
-  if (button) {
-    button.addEventListener(&quot;click&quot;, function () {
-      const selected = Array.from(document.querySelectorAll(&#39;input[name=&quot;qItem&quot;]:checked&#39;)).map(cb =&gt; cb.value);
-      State.variables.selectedItems = selected;
-      Engine.play(&quot;Quarantine_Reflection&quot;);
-    });
-  }
-};
-&lt;&lt;/script&gt;&gt;
-</tw-passagedata><tw-passagedata pid="33" name="Reconstruct Murra" tags="" position="175,300" size="100,100">You compile Ela’s grid scrap, the faded housing notes, and the names from the district roll. There are no coordinates, no formal verification—but it is more rooted in lived experience than the sterile placeholder file ever was.
+&lt;&lt;set $pickedVoice = $selectedItems.includes(&quot;VoiceStub&quot;)&gt;</tw-passagedata><tw-passagedata pid="31" name="Reconstruct Murra" tags="" position="175,300" size="100,100">You compile Ela’s grid scrap, the faded housing notes, and the names from the district roll. There are no coordinates, no formal verification—but it is more rooted in lived experience than the sterile placeholder file ever was.
 
 You tag the record with a caution flag:
 
@@ -603,8 +607,7 @@ Ela watches quietly, arms crossed.
 
 &lt;&lt;set $corvenDecision = &quot;murraOnly&quot;&gt;&gt;
 
-[[Submit record|MurraReflectionQ1]]</tw-passagedata><tw-passagedata pid="34" name="Set down in Suzamen" tags="" position="1150,75" size="100,100">&lt;strong&gt;Restoring Suzamen&lt;/strong&gt;
-&lt;strong&gt;Mission 1: Port Reconnect&lt;/strong&gt;
+[[Submit record|MurraReflectionQ1]]</tw-passagedata><tw-passagedata pid="32" name="Set down in Suzamen" tags="" position="1150,75" size="100,100">&lt;strong&gt;Mission 1: Port Reconnect&lt;/strong&gt;
 
 Suzamen is a planet-sized truck stop with swamp rot and verticality—wetlands in the valleys, mountains overhead, and barely-functioning civic tech wedged into both. Their records haven’t seen schema alignment since the last sun cycle, and whole clusters are flagged as “pending” or “structurally compromised.” Honestly, same.
 
@@ -612,24 +615,27 @@ When you step off the shuttle and onto Suzamen Port’s docks, the air hits like
 
 You duck into the closest structure still pretending to be a building: the Port’s Citizenry Office.
 
+&lt;center&gt;&lt;img src=&quot;https://i.postimg.cc/WpgfZJ11/a-swampy-planets-infrastructure-is-destroyed-by-a-storm-we-are-standing-in-a-partially-intact-citize.jpg&quot; alt=&quot;Interior of an abandoned office overgrown with bright red mushrooms and glowing light through the windows&quot; style=&quot;width:90%; max-width:800px; margin-bottom:1em;&quot;&gt;&lt;/center&gt;
+
 You&#39;re standing in what’s left of it—a ruin with ambition. The walls are damp. The floor is uneven. A scan terminal blinks erratically on top of a metal cabinet that might technically be on fire.
 
 The last storm took out their uplink. Again. It also took out people, homes, and businesses, but that’s more of a local issue.
 
 Your job is to reestablish just enough record integrity, availability, and accountability to justify pulling them back into the Choral network. No one expects a miracle—they expect just enough governance to justify the invoice.
 
-There’s a wall console humming behind the cabinet, its screen dim, smeared, and marked with what looks like half a bootprint. It might still work.
+There’s a terminal tucket behind a wall, its screen still glowing, although it is smeared and marked with what looks like half a bootprint. It might still work.
 
-[[Approach the console]]</tw-passagedata><tw-passagedata pid="35" name="Soup Answer" tags="" position="825,700" size="100,100">&lt;&lt;silently&gt;&gt;&lt;&lt;set $viewedSoup = true&gt;&gt;&lt;&lt;/silently&gt;&gt;
+[[Approach the console]]</tw-passagedata><tw-passagedata pid="33" name="Soup Answer" tags="" position="825,700" size="100,100">&lt;&lt;silently&gt;&gt;&lt;&lt;set $viewedSoup = true&gt;&gt;&lt;&lt;/silently&gt;&gt;
 ❌The bookmarked recipe isn’t a business record—but it could still be a personal one, if saved as part of someone’s planning or journaling. In the right context, it might even qualify as a historic record. Most of the time, though? It’s just soup.  
 
-[[Back|What is a record?]]</tw-passagedata><tw-passagedata pid="36" name="Standards" tags="" position="1600,100" size="100,100">&lt;&lt;silently&gt;&gt;&lt;&lt;set $seenStandards = true&gt;&gt;&lt;&lt;/silently&gt;&gt;
+[[Back|What is a record?]]</tw-passagedata><tw-passagedata pid="34" name="Standards" tags="" position="1600,100" size="100,100">&lt;&lt;silently&gt;&gt;&lt;&lt;set $seenStandards = true&gt;&gt;&lt;&lt;/silently&gt;&gt;
 This OS predates current Choral schema. The fields are out of alignment. Data types are inconsistent. There’s no input validation or error handling. Someone could submit a log where the &quot;Date&quot; field says &quot;blueberries&quot; and it would go through.  
-Even worse, there’s no metadata around retention or cleanup. Records might sit here indefinitely—or get wiped without any notice. No expiration dates. No archival tagging. Nothing. Searching for information in this thing would be like trying to find one very specific needle in a room full of...well, other needles.
-You’re looking at a machine that doesn’t know what to keep or what to let go and a system that is so disorganized that it feels wrong to call it a &quot;system&quot; because that implies order.  
-&lt;em&gt;GARP themes to consider: Compliance, Integrity, Retention, Disposition, (lack of) Availability&lt;/em&gt;  
+Even worse, there’s no metadata around retention or cleanup. Records might sit here indefinitely—or get wiped without any notice. No expiration dates. No archival tagging. Nothing. Searching for information in this thing would be like trying to find one very specific needle in a room full of...well, other needles.  
+You’re looking at a machine that doesn’t know what to keep or what to let go and a system so disorganized it feels wrong to call it a &quot;system&quot; at all.  
+&lt;strong&gt;GARP themes to consider:&lt;/strong&gt; &lt;span class=&quot;garp-compliance&quot;&gt;Compliance&lt;/span&gt;, &lt;span class=&quot;garp-integrity&quot;&gt;Integrity&lt;/span&gt;, &lt;span class=&quot;garp-retention&quot;&gt;Retention&lt;/span&gt;, &lt;span class=&quot;garp-disposition&quot;&gt;Disposition&lt;/span&gt;, &lt;span class=&quot;garp-availability&quot;&gt;(lack of) Availability&lt;/span&gt;
 
-[[Back|Approach the console]]</tw-passagedata><tw-passagedata pid="37" name="StoryInit" tags="" position="500,525" size="100,100">:: StoryInit
+[[Back|Approach the console]]
+</tw-passagedata><tw-passagedata pid="35" name="StoryInit" tags="" position="500,525" size="100,100">:: StoryInit
 &lt;&lt;script&gt;&gt;
 window.setup = window.setup || {};
 
@@ -674,7 +680,7 @@ setup.captureQuarantineSelection = function () {
 &lt;&lt;set $visitedEla = false&gt;&gt;
 &lt;&lt;set $checkedChip = false&gt;&gt;
 &lt;&lt;set $documentedUseAnyway = false&gt;&gt;
-&lt;&lt;set $usedQuarantinePortable to false&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="Submit Corven" tags="" position="350,325" size="100,100">You finalize the Corven Stub as the official record for this zone.
+&lt;&lt;set $usedQuarantinePortable to false&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Submit Corven" tags="" position="350,325" size="100,100">You finalize the Corven Stub as the official record for this zone.
 
 The system accepts it without hesitation. It fits the schema. It aligns with known grid structures. It meets the minimum data requirements.
 
@@ -685,7 +691,7 @@ Ela watches the screen. She doesn’t argue. But she doesn’t look at you, eith
 
 She walks away.
 
-[[Corven Reflection]]</tw-passagedata><tw-passagedata pid="39" name="Survey" tags="" position="500,200" size="100,100">You walk the site with a field scanner, but the data&#39;s messy. Too much flood damage. Too much time. The system throws errors more often than it logs usable inputs.
+[[Corven Reflection]]</tw-passagedata><tw-passagedata pid="37" name="Survey" tags="" position="500,200" size="100,100">You walk the site with a field scanner, but the data&#39;s messy. Too much flood damage. Too much time. The system throws errors more often than it logs usable inputs.
 
 Still, you find:
 
@@ -697,7 +703,7 @@ None of it is timestamped. None of it would hold up in audit. But it feels more 
 
 [[Try to reconstruct Ela&#39;s Murra’s Edge|Reconstruct Murra]]  
 [[Submit both Corven and Murra as a conflicted record|Dual Submit]]  
-[[Submit Corven as the official record|Submit Corven]]</tw-passagedata><tw-passagedata pid="40" name="The Beginning" tags="" position="850,25" size="100,100">Greetings, Earthling refugee! My sincerest condolences for the untimely demise of your planet, but do not panic—you are now under the protection of the Choral of Worlds, the largest loosely-coordinated governing body in the known universe. Congratulations on surviving long enough to be our problem.
+[[Submit Corven as the official record|Submit Corven]]</tw-passagedata><tw-passagedata pid="38" name="The Beginning" tags="" position="850,25" size="100,100">Greetings, Earthling refugee! My sincerest condolences for the untimely demise of your planet, but do not panic—you are now under the protection of the Choral of Worlds, the largest loosely-coordinated governing body in the known universe. Congratulations on surviving long enough to be our problem.
 
 As a refugee, you have not yet qualified for full citizenship.  
 You have, however, been selected for Probationary Administrative Integration.
@@ -710,7 +716,7 @@ Please proceed to your assigned scanner station.
 [[Proceed to scanner]]
 [[Case 01]]
 [[GARP_Scenario1_Decision]]
-</tw-passagedata><tw-passagedata pid="41" name="The packet goes through" tags="" position="1500,625" size="100,100">Suzamen Port lights up again in the network—no longer flagged as “pending” or “nonresponsive,” but active, aligned, technically reachable. Not important, necessarily, but no longer ignorable.
+</tw-passagedata><tw-passagedata pid="39" name="The packet goes through" tags="" position="1500,600" size="100,100">Suzamen Port lights up again in the network—no longer flagged as “pending” or “nonresponsive,” but active, aligned, technically reachable. Not important, necessarily, but no longer ignorable.
 
 That’s all it takes.
 
@@ -727,7 +733,7 @@ You could move on now. The sync worked.
 
 &lt;&lt;if $documentedUseAnyway&gt;&gt;
 [[Continue|UseAnyway_Reflection]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="UseAnyway_Justify" tags="" position="1425,800" size="100,100">You open the scratchpad on your portable. It’s not an official report—just a personal log—but you know how this works. Anything near a live terminal gets pulled into the sync whether you mean it to or not, so once you save.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="UseAnyway_Justify" tags="" position="1400,750" size="100,100">You open the scratchpad on your portable. It’s not an official report—just a personal log—but you know how this works. Anything near a live terminal gets pulled into the sync whether you mean it to or not, so once you save.
 
 You type:
 
@@ -745,25 +751,30 @@ It saves. A faint ping confirms it’s tagged for upload.
 
 &lt;&lt;set $documentedUseAnyway = true&gt;&gt;
 
-[[Close your portable and continue|UseAnyway_Reflection]]</tw-passagedata><tw-passagedata pid="43" name="UseAnyway_Reflection" tags="" position="1575,875" size="100,100">You hit Availability. Suzamen Port is visible again—on the grid, back in the system, no longer listed as “pending” or ignored. That matters. Doors open when the lights are on.
+[[Close your portable and continue|UseAnyway_Reflection]]</tw-passagedata><tw-passagedata pid="41" name="UseAnyway_Reflection" tags="" position="1525,925" size="100,100">&lt;span class=&quot;garp-availability&quot;&gt;Availability&lt;/span&gt;: Suzamen Port is visible again—on the grid, back in the system, no longer listed as “pending” or ignored. That matters. Doors open when the lights are on.
 
-But you didn’t hit Integrity. You pushed what the terminal had. You do not know if it was accurate, current, or even complete. No validation, no logs, just data flung upstream and marked as real.
+&lt;span class=&quot;garp-integrity&quot;&gt;Integrity&lt;/span&gt;? Not really. You pushed what the terminal had. You do not know if it was accurate, current, or even complete. No validation, no logs, just data flung upstream and marked as real.
 
-Compliance? Questionable. Choral will take the packet—they asked for it, after all—but it does not meet any modern standard. No structure. No metadata. No idea what it will trigger downstream.
+&lt;span class=&quot;garp-compliance&quot;&gt;Compliance&lt;/span&gt; is questionable. Choral will take the packet—they asked for it, after all—but it does not meet any modern standard. No structure. No metadata. No idea what it will trigger downstream.
 
-Protection was never on the table. That machine was degraded, open, and not exactly secure. You got the signal out, but anything else—malware, ghost entries, corrupted logs—could have gone with it.
+&lt;span class=&quot;garp-protection&quot;&gt;Protection&lt;/span&gt; was never on the table. That machine was degraded, open, and not exactly secure. You got the signal out, but anything else—malware, ghost entries, corrupted logs—could have gone with it.
 
-Accountability is a maybe.
+&lt;span class=&quot;garp-accountability&quot;&gt;Accountability&lt;/span&gt; is a maybe.  
 &lt;&lt;if $documentedUseAnyway&gt;&gt;
-You logged your reasoning. If anyone checks later, they will see your orders, the situation you encountered, what you saw—and what you chose to do. That will help explain your somewhat unorthodox decisions.
+You logged your reasoning. If anyone checks later, they’ll see your orders, the situation you encountered, what you saw—and what you chose to do. That will help explain your somewhat unorthodox decisions.
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if !$documentedUseAnyway&gt;&gt;
 You didn’t explain. The system has your name and a timestamp, but no context. If this bites someone later, it circles back to you.
 &lt;&lt;/if&gt;&gt;
-You didn’t fix the system. You just made it loud enough for Choral to notice that it was off-key.
 
-[[Continue|BridgeToNext]]</tw-passagedata><tw-passagedata pid="44" name="What is a record?" tags="" position="850,525" size="100,100">The screen flashes:  
-&lt;strong&gt;What is a record?&lt;/strong&gt;  
+You didn’t fix the system. You just made it loud enough for Choral to notice it was off-key.
+&lt;&lt;if $mushroomChoice&gt;&gt;
+You already investigated the mushroom growth.  
+[[Continue to GARP quiz|GARP1_Quiz]]
+&lt;&lt;else&gt;&gt;
+[[Move on]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="What is a record?" tags="" position="850,525" size="100,100">The screen flashes:  
+&lt;strong&gt;Orientation Module 1: What is a record?&lt;/strong&gt;  
 A record is any information created, received, and maintained as evidence of a decision, action, or transaction.  
 It can be physical or digital, formal or informal—as long as it documents what happened, who did it, when, why, or how, it’s a record.
 
@@ -779,15 +790,15 @@ Click on each item to learn more about its record status:
 
 &lt;&lt;if $viewedContract and $viewedImage and $viewedPayroll and $viewedSoup&gt;&gt;  
 [[What is records management?]]  
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="What is records management?" tags="" position="900,900" size="100,100">Records management is the process of controlling records throughout their lifecycle—from creation and active use, through storage, to final disposition (either destruction or archiving).
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="What is records management?" tags="" position="900,900" size="100,100">Records management is the process of controlling records throughout their lifecycle—from creation and active use, through storage, to final disposition (either destruction or archiving).
 
 Record managers oversee and facilitate this process to &lt;strong&gt; ensure records are accurate, accessible, secure, and disposed of properly when no longer needed&lt;/strong&gt;.
 
-[[Learn about the record lifecycle|Lifecycle Model]]</tw-passagedata><tw-passagedata pid="46" name="Yes" tags="" position="975,325" size="100,100">Don&#39;t blame you. You rush the door, barrelling into it like you&#39;ve seen cops do on television. There are no satisfying sounds of locks breaking--the door doesn&#39;t budge. You&#39;re going to have one hell of a bruise.
+[[Learn about the record lifecycle|Lifecycle Model]]</tw-passagedata><tw-passagedata pid="44" name="Yes" tags="" position="975,325" size="100,100">Don&#39;t blame you. You rush the door, barrelling into it like you&#39;ve seen cops do on television. There are no satisfying sounds of locks breaking--the door doesn&#39;t budge. You&#39;re going to have one hell of a bruise.
 
 &quot;Did you forget that we&#39;re in space?&quot; asks the young woman increduously. &quot;We have way better doors than anything you&#39;re used to, because if the wrong one opens, we all die. Let&#39;s go back and try that again, shall we?&quot;
 
-[[Well, that was pointless|No]]</tw-passagedata><tw-passagedata pid="47" name="d" tags="" position="225,800" size="100,100">Your log flashes green beside the zone. &quot;Corven&quot; is now an active district in the Choral registry.  
+[[Well, that was pointless|No]]</tw-passagedata><tw-passagedata pid="45" name="d" tags="" position="225,800" size="100,100">Your log flashes green beside the zone. &quot;Corven&quot; is now an active district in the Choral registry.  
 Power restoration is tentatively scheduled. Supply eligibility: approved.
 
 No one questions the file. No one asks where it came from.
@@ -797,7 +808,7 @@ Ela is already gone—down the path, out of sight. She left without a word.
 The next site lies farther inland. Out here, word travels faster than systems sync.  
 Whether you are welcomed or warned off will depend on what they’ve heard.
 
-[[Continue|Case 02]]</tw-passagedata><tw-passagedata pid="48" name="Quarantine_Reflection_Outcome" tags="" position="1300,875" size="100,100">&lt;strong&gt;Archive Confirmed.&lt;/strong&gt;&lt;br&gt;
+[[Continue|Case 02]]</tw-passagedata><tw-passagedata pid="46" name="Quarantine_Reflection_Outcome" tags="" position="1300,875" size="100,100">&lt;strong&gt;Archive Confirmed.&lt;/strong&gt;&lt;br&gt;
 Your tagged file is submitted for central processing.  
 You’ve made your choices, and more importantly—you’ve shown your reasoning.
 
@@ -806,14 +817,10 @@ The Choral will flag your selections for reintegration priority. Some records ma
 Either way, they’re no longer forgotten.
 
 [[Proceed|NextModule]]
-</tw-passagedata><tw-passagedata pid="49" name="NextModule" tags="" position="1425,1000" size="100,100"></tw-passagedata><tw-passagedata pid="50" name="Quarantine_Outcome" tags="" position="1275,1100" size="100,100"></tw-passagedata><tw-passagedata pid="51" name="GARP1_Bridge" tags="" position="1675,600" size="100,100"></tw-passagedata><tw-passagedata pid="52" name="Port_SyncReflection" tags="" position="1850,1000" size="100,100">You add a note to the report.
-Not a narrative. Just enough to make the choices legible.
-You list the failure points. Flag what you salvaged and why. Include timestamped overrides, fallback decisions, and the logic behind your field-level edits.
-&lt;silently&gt;&lt;&lt;set $garpAccountability = true&gt;&gt;
-&lt;&lt;set $wroteReflection = true&gt;&gt;
-&lt;&lt;set $garpIntegrity = true&gt;&gt;&lt;/silently&gt;
-[[Continue|BridgeToNext]]
-</tw-passagedata><tw-passagedata pid="53" name="BridgeToNext" tags="" position="1650,1050" size="100,100">&lt;&lt;if $usedPatchSync&gt;&gt;
+</tw-passagedata><tw-passagedata pid="47" name="NextModule" tags="" position="1425,1025" size="100,100"></tw-passagedata><tw-passagedata pid="48" name="Quarantine_Outcome" tags="" position="1275,1100" size="100,100"></tw-passagedata><tw-passagedata pid="49" name="Port_SyncReflection" tags="" position="2050,800" size="100,100">You add a note to the packet. Not a full narrative—just enough to surface your decisions.
+You document what failed, what held, and why it mattered. The edits are timestamped. Overrides marked. Your fallback logic is clear; if someone checks later, they will know how the record took shape.
+&lt;silently&gt; &lt;&lt;set $garpAccountability = true&gt;&gt; &lt;&lt;set $wroteReflection = true&gt;&gt; &lt;&lt;set $garpIntegrity = true&gt;&gt; &lt;/silently&gt;
+[[Continue|PatchSyncConclusionYes]]</tw-passagedata><tw-passagedata pid="50" name="BridgeToNext" tags="" position="1575,1075" size="100,100">&lt;&lt;if $usedPatchSync&gt;&gt;
 You hit Availability. Suzamen Port is back in the system, its location and activity restored to the grid. Not fully trusted—but visible. And visibility matters.
 You also hit Integrity. Not cleanly, not absolutely—but you reviewed each entry, flagged what was salvageable, and let the rest rot. The result may be ugly, but it can be traced.
 Compliance? Partial. You bent protocol to make the data fit. But you documented your edits, used version tagging, and labeled your fallback logic. That counts.
@@ -841,80 +848,84 @@ You didn’t explain. The system has your name and a timestamp, but no context. 
 You didn’t fix the system. You just made it loud enough for Choral to notice that it was off-key.
 &lt;&lt;/if&gt;&gt;
 [[Continue|GARP1_Quiz]]
-</tw-passagedata><tw-passagedata pid="54" name="PatchSync_Select" tags="" position="1850,600" size="100,100">You cannot clean everything.  
-But some of it can still be made usable.
-
-What will you tag for partial sync?
-
-&lt;form id=&quot;patchSyncChecklist&quot;&gt;
-&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;patchItem&quot; value=&quot;PortLog&quot;&gt; Port Log Extract (partially overwritten, marked as “TEST” but includes trade figures)&lt;/label&gt;
-&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;patchItem&quot; value=&quot;HolidayCard&quot;&gt; Scanned Holiday Card (reads: “Merry Gridmas 8AE! Love, the Whittakers”)&lt;/label&gt;
-&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;patchItem&quot; value=&quot;Ledger&quot;&gt; Infrastructure Ledger (dated, inconsistent tags, but core routing data is legible)&lt;/label&gt;
-&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;patchItem&quot; value=&quot;SelfieDump&quot;&gt; “BEN_CAM_BACKUP” (20 low-res selfies, unclear subject, some corrupted)&lt;/label&gt;
-&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;patchItem&quot; value=&quot;TransitChart&quot;&gt; Transit Chart (unsigned, undated, but matches known node grid)&lt;/label&gt;
-&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;patchItem&quot; value=&quot;MealLog&quot;&gt; Meal Tracking Log (entries include “Tastes blue” and “Regret?” under Comments)&lt;/label&gt;
-&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;patchItem&quot; value=&quot;CommTrace&quot;&gt; Comms Trace Bundle (encrypted fragments—some corrupt, some recent)&lt;/label&gt;&lt;/form&gt;
-&lt;button onclick=&quot;setup.capturePatchSyncSelection()&quot;&gt;Submit&lt;/button&gt;
+</tw-passagedata><tw-passagedata pid="51" name="PatchSync_Select" tags="" position="1975,525" size="100,100">Not all of this will transmit cleanly. Choose &lt;strong&gt;FOUR&lt;/strong&gt; items to include in a partial sync—enough to reestablish Suzamen’s presence in the system.
+&lt;div id=&quot;patchChecklist&quot; style=&quot;line-height:1.2em; font-size:0.95em; margin-bottom:1em;&quot;&gt;&lt;/div&gt;
+&lt;&lt;button &quot;Submit Selection&quot;&gt;&gt;
+  &lt;&lt;set $selectedPatchItems = []&gt;&gt;
+  &lt;&lt;for _cb range jQuery(&quot;input[name=&#39;patchItem&#39;]:checked&quot;).toArray()&gt;&gt;
+    &lt;&lt;set $selectedPatchItems.push(_cb.value)&gt;&gt;
+  &lt;&lt;/for&gt;&gt;
+  &lt;&lt;goto &quot;PatchSync_Reflex&quot;&gt;&gt;
+&lt;&lt;/button&gt;&gt;
 &lt;script&gt;
-window.setup = window.setup || {};
-setup.capturePatchSyncSelection = function () {
-  const selected = Array.from(document.querySelectorAll(&#39;input[name=&quot;patchItem&quot;]:checked&#39;)).map(cb =&gt; cb.value);
-  SugarCube.State.variables.selectedPatchItems = selected;
-  SugarCube.Engine.play(&quot;PatchSync_Reflex&quot;);
-};
+$(document).ready(function () {
+  const maxSelections = 4;
+  const items = [
+    { value: &quot;PortLog&quot;, label: &quot;📄 Port Log – Partially intact transaction report, includes dates, shipment tags, and registry stamps.&quot; },
+    { value: &quot;ResidentialMap&quot;, label: &quot;🗺 Map Fragment – Faded residential sketch, district labels barely visible.&quot; },
+    { value: &quot;FieldJournal&quot;, label: &quot;🌱 Field Journal – Handwritten flora survey, notes on spores and soil conditions.&quot; },
+    { value: &quot;OralHistories&quot;, label: &quot;🔊 Audio Archive – Slightly warped datachips labeled &#39;oral histories&#39;, mention storms and surnames.&quot; },
+    { value: &quot;BenSelfies&quot;, label: &quot;🤳 Selfie Dump – Mostly someone named Ben making duck faces in a vent.&quot; },
+    { value: &quot;HolidayCard&quot;, label: &quot;🎉 Holiday Card – Generic seasonal greeting, scanned with sparkle effects. A bold choice.&quot; },
+    { value: &quot;MealTracker&quot;, label: &quot;🍽 Meal Log – Unlabeled food sketches and phrases like &#39;Don&#39;t trust the lunchroom fish&#39;.&quot; }
+  ];
+
+  for (let i = items.length - 1; i &gt; 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [items[i], items[j]] = [items[j], items[i]];
+  }
+
+  const checklistDiv = $(&quot;#patchChecklist&quot;);
+  checklistDiv.empty();
+  items.forEach(item =&gt; {
+    checklistDiv.append(
+      `&lt;label style=&quot;display:block; margin-bottom:0.15em;&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; name=&quot;patchItem&quot; value=&quot;${item.value}&quot;&gt; ${item.label}
+      &lt;/label&gt;`
+    );
+  });
+
+  checklistDiv.on(&quot;change&quot;, &quot;input[name=&#39;patchItem&#39;]&quot;, function () {
+    const checkedCount = $(&quot;input[name=&#39;patchItem&#39;]:checked&quot;).length;
+    if (checkedCount &gt; maxSelections) {
+      this.checked = false;
+      alert(&quot;You can select up to 4 items.&quot;);
+    }
+  });
+});
 &lt;/script&gt;
-</tw-passagedata><tw-passagedata pid="55" name="PatchSync_Reflex" tags="" position="1850,725" size="100,100">You compile a partial packet.  
-It is full of holes—but it is not without value.
 
-&lt;&lt;if $selectedPatchItems.includes(&quot;Ledger&quot;)&gt;&gt;
-&lt;strong&gt;Infrastructure Ledger&lt;/strong&gt;
-Tagged as incomplete but internally consistent. You log it as low-risk, high-utility.
-&lt;&lt;/if&gt;&gt;
+</tw-passagedata><tw-passagedata pid="52" name="PatchSync_Reflex" tags="" position="2175,575" size="100,100">You compile a partial packet. It is full of holes—but not without value.
+
 &lt;&lt;if $selectedPatchItems.includes(&quot;PortLog&quot;)&gt;&gt;
-&lt;strong&gt;Port Log Extract&lt;/strong&gt;
-Marked “TEST,” but trade values align with external data. You include a caution note and let it through.
-&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $selectedPatchItems.includes(&quot;CommTrace&quot;)&gt;&gt;
-&lt;strong&gt;Comms Trace Bundle&lt;/strong&gt;
-Decryption is partial. Some fragments are salvageable. You flag encryption mismatch and submit the rest.
-&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $selectedPatchItems.includes(&quot;TransitChart&quot;)&gt;&gt;
-&lt;strong&gt;Transit Chart&lt;/strong&gt;
-No signature. No date. But it matches current grid overlays. You label it provisional and send it up.
-&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $selectedPatchItems.includes(&quot;SelfieDump&quot;)&gt;&gt;
-&lt;strong&gt;“BEN_CAM_BACKUP”&lt;/strong&gt;
-Twenty blurry selfies, low res, possible timestamp drift. You include it with the note: “No confirmed relevance.”
-&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $selectedPatchItems.includes(&quot;MealLog&quot;)&gt;&gt;
-&lt;strong&gt;Meal Tracking Log&lt;/strong&gt;
-Erratic language, no standard units. One page is sticky. You submit it anyway, tagged for ethnographic review.
-&lt;&lt;/if&gt;&gt;
+📄 The port log offers a point of reference. Flawed or not, it is still official.&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $selectedPatchItems.includes(&quot;ResidentialMap&quot;)&gt;&gt;
+🗺 The map is worn and mismatched—but it shows someone once knew where things were.&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $selectedPatchItems.includes(&quot;FieldJournal&quot;)&gt;&gt;
+🌱 The mushroom notes are obsessive, local, and exactly the kind of record Choral desperately needs, particularly for the outer colonies.&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $selectedPatchItems.includes(&quot;OralHistories&quot;)&gt;&gt;
+🔊 Oral histories carry memory. Messy, biased, personal—but alive.&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $selectedPatchItems.includes(&quot;BenSelfies&quot;)&gt;&gt;
+🤳 Ben’s selfie archive includes a duck face in a vent and four angles of the same smirk.&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $selectedPatchItems.includes(&quot;HolidayCard&quot;)&gt;&gt;
-&lt;strong&gt;Scanned Holiday Card&lt;/strong&gt;
-Minimal metadata. Decorative content. You include it with a soft tag: “Cultural ephemera.”
-&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $selectedPatchItems.length == 0&gt;&gt;
-You did not tag any files. The packet goes up blank. Choral logs receipt with a warning: content null, audit pending.
-&lt;&lt;/if&gt;&gt;
-
-[[Continue|GARP1_PatchSync_Final]]
-</tw-passagedata><tw-passagedata pid="56" name="GARP1_PatchSync_Final" tags="" position="1850,875" size="100,100">You flagged corrupted fields, tagged risks, and submitted what held.
-
-Choral receives a partial sync—yellow-lit, warning-loaded, but traceable. Your markup is intact. The audit trail is yours.
-&lt;silently&gt;&lt;&lt;set $garpIntegrity = true&gt;&gt;
-&lt;&lt;set $garpAccountability = true&gt;&gt;
-&lt;&lt;set $usedPatchSync = true&gt;&gt;&lt;/silently&gt;
-
-&lt;strong&gt;Do you want to justify the decisions you made?&lt;/strong&gt;
-
+🎉 A glitter-filtered holiday card. Sentimental, maybe. Useful? No.&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $selectedPatchItems.includes(&quot;MealTracker&quot;)&gt;&gt;
+🍽 Notes like “don’t trust the lunchroom fish” suggest paranoia more than recordkeeping.&lt;&lt;/if&gt;&gt;
+You send the packet through to the Choral network. It is traceable, intentional, and incomplete—but enough to reestablish Suzamen within Choral’s technological infrastructure—visible again, flagged but not forgotten.
+&lt;&lt;silently&gt;&gt;
+  &lt;&lt;set $garpIntegrity = true&gt;&gt;
+  &lt;&lt;set $garpAccountability = true&gt;&gt;
+  &lt;&lt;set $usedPatchSync = true&gt;&gt;
+&lt;&lt;/silently&gt;&gt;
+&lt;strong&gt;Do you want to justify the decisions you made?&lt;/strong&gt;&lt;br&gt;
 &lt;&lt;link &quot;Yes—add a short note to the report&quot;&gt;&gt;
   &lt;&lt;goto &quot;Port_SyncReflection&quot;&gt;&gt;
-&lt;&lt;/link&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;br&gt;
 &lt;&lt;link &quot;No—move on to the next task&quot;&gt;&gt;
-  &lt;&lt;goto &quot;BridgeToNext&quot;&gt;&gt;
+  &lt;&lt;goto &quot;PatchSyncConcNo&quot;&gt;&gt;
 &lt;&lt;/link&gt;&gt;
-</tw-passagedata><tw-passagedata pid="57" name="GARP1_Quiz" tags="" position="1775,1150" size="100,100">&lt;strong&gt;GARP Review&lt;/strong&gt;
+</tw-passagedata><tw-passagedata pid="53" name="GARP1_PatchSync_Final" tags="" position="2175,775" size="100,100">You flagged corrupted fields, tagged risks, and submitted what held.
+Choral receives a partial sync—yellow-lit, warning-loaded, but traceable. Your markup is intact. The audit trail is yours.</tw-passagedata><tw-passagedata pid="54" name="GARP1_Quiz" tags="" position="1775,1150" size="100,100">&lt;strong&gt;GARP Review&lt;/strong&gt;
 &lt;ol&gt;
 &lt;li&gt;Which GARP principle was demonstrated when Suzamen Port became visible on the grid again?&lt;/li&gt;
 &lt;&lt;radiobutton &quot;$garpQ1&quot; &quot;Protection&quot;&gt;&gt; Protection&lt;br&gt;
@@ -933,7 +944,7 @@ Choral receives a partial sync—yellow-lit, warning-loaded, but traceable. Your
 &lt;/ol&gt;
 
 [[Submit Answers|GARP1_QuizResults]]
-</tw-passagedata><tw-passagedata pid="58" name="GARP1_QuizResults" tags="" position="1675,1275" size="100,100">&lt;silently&gt;
+</tw-passagedata><tw-passagedata pid="55" name="GARP1_QuizResults" tags="" position="1550,1250" size="100,100">&lt;silently&gt;
 &lt;&lt;set _score = 0&gt;&gt;
 &lt;&lt;if $garpQ1 == &quot;Availability&quot;&gt;&gt;&lt;&lt;set _score += 1&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $garpQ2 == &quot;Integrity&quot;&gt;&gt;&lt;&lt;set _score += 1&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -957,6 +968,81 @@ You moved data without understanding the consequences. You may have restored vis
 &lt;&lt;/if&gt;&gt;
 
 [[Continue|NextModule]]
+</tw-passagedata><tw-passagedata pid="56" name="Oh my god, look at the mushrooms!" tags="" position="1675,425" size="100,100">You&#39;re definitely supposed to be reconnecting Suzamen to the main Choral network, but you&#39;ve never seen mushrooms like these before. Some of them pulse, and the entire fungal network seems to be feeding off the electrical supply. Mycelia have spread out along exposed wires and other sources of conductive waste and residual charge.
+This is too interesting to ignore, and this type of local information is what the Choral of Worlds needs to have a complete understanding of the outer planets in their alliance.
+[[Check out the fungal activity]]</tw-passagedata><tw-passagedata pid="57" name="PatchSyncConclusionYes" tags="" position="2125,925" size="100,100">You got Suzamen Port visible again. Not fully trusted—but back in the system, back on the grid. &lt;span class=&quot;garp-availability&quot;&gt;Visibility matters&lt;/span&gt;.  
+The packet is not clean. But it is traceable. You kept what held, flagged what cracked, and let the rest go. &lt;span class=&quot;garp-integrity&quot;&gt;Integrity&lt;/span&gt;, in rough form.  
+Protocol bent in a few places—but you documented the edits, tagged your versions, left notes where the structure buckled. It is not perfect &lt;span class=&quot;garp-compliance&quot;&gt;compliance&lt;/span&gt;, but it is honest.  
+&lt;span class=&quot;garp-protection&quot;&gt;Protection&lt;/span&gt;’s thin. The system was already exposed. You quarantined what you could. Whatever was buried deeper stayed out of reach.  
+But the trail is clear. Every change, every omission, every decision is marked. You made your reasoning legible. That’s &lt;span class=&quot;garp-accountability&quot;&gt;accountability&lt;/span&gt;.
+&lt;&lt;if $mushroomChoice&gt;&gt;
+You already investigated the mushroom growth.  
+[[Continue to GARP quiz|GARP1_Quiz]]
+&lt;&lt;else&gt;&gt;
+[[Move on]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="Move on" tags="" position="1925,1075" size="100,100">The giant mushrooms are starting to freak you out. Why are they everywhere? You decide to investigate.
+
+[[Check out the fungal activity]] </tw-passagedata><tw-passagedata pid="59" name="PatchSyncConcNo" tags="" position="2025,675" size="100,100">You did not add any notes reflecting your decisions or situation. The packet is submitted—tagged, timestamped, and partially synced, with your caution markers and reliability tags intact. That gives Choral what they need to register &lt;span class=&quot;garp-availability&quot;&gt;Availability&lt;/span&gt; and assess &lt;span class=&quot;garp-integrity&quot;&gt;Integrity&lt;/span&gt;. Your field-level edits and exclusions show up in the metadata trail, which also supports &lt;span class=&quot;garp-transparency&quot;&gt;Transparency&lt;/span&gt;.  
+But the logic behind your decisions is missing.  
+No context, no justification—just a set of actions without explanation. The record shows what you selected and what you left out, but not why. If someone reviews this later, they’ll see outcomes with no insight into the judgment that shaped them. It is defensible, technically. Just not easy to defend.
+
+[[Move on]]</tw-passagedata><tw-passagedata pid="60" name="Check out the fungal activity" tags="" position="1675,550" size="100,100">&lt;img src=&quot;https://i.postimg.cc/3RwdyrbZ/a-swampy-planets-infrastructure-is-destroyed-by-a-storm-we-are-standing-in-a-partially-intact-citize.jpg&quot; alt=&quot;Damaged Citizenry Office with fungal growth&quot; style=&quot;max-width:100%; height:auto; border-radius:0.5em; margin-bottom:1em;&quot;&gt;
+The mushrooms are not just thriving—they&#39;re interfacing. Spongy caps bloom from old conduit lines, and mycelial filaments glisten across charred metal and junction boards, feeding on residual charge like it was engineered for them.
+You take a closer look. The growth is uneven, but spore activity is higher near thermal vents, and you notice one port with visibly warped internal shielding. It’s possible the fungi are embedding spores in aging record carriers. There’s a box of backup media here—optical, magnetic, hybrid formats—and several are visibly compromised.
+You suspect this is where the spore network started. Some of the records might still be readable, but if you connect the wrong one, you risk contaminating your portable. but there&#39;s a pattern: clusters near core junctions, bioluminescent pulses that almost seem rhythmic.
+You could walk away, call it a curiosity—but this might be a local infrastructure-adjacent system no one ever documented. Or it might be dangerous.
+Someone needs to record this. The question is how.
+
+&lt;strong&gt;What do you do?&lt;/strong&gt;
+&lt;&lt;link &quot;Take a photo of the mushrooms&quot;&gt;&gt;&lt;&lt;set $mushroomChoice = &quot;Photo&quot;&gt;&gt;&lt;&lt;goto &quot;Mushroom_Reflection&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;Log the anomaly and tag the location&quot;&gt;&gt;&lt;&lt;set $mushroomChoice = &quot;Log&quot;&gt;&gt;&lt;&lt;goto &quot;Mushroom_Reflection&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;Seal off the area and quarantine the network&quot;&gt;&gt;&lt;&lt;set $mushroomChoice = &quot;Seal&quot;&gt;&gt;&lt;&lt;goto &quot;Mushroom_Reflection&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;Upload a mushroom sample with no context&quot;&gt;&gt;&lt;&lt;set $mushroomChoice = &quot;Bad&quot;&gt;&gt;&lt;&lt;goto &quot;Mushroom_Reflection&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+</tw-passagedata><tw-passagedata pid="61" name="Mushroom_Log" tags="" position="1750,700" size="100,100">You log the anomaly and flag the coordinates with a cautionary tag. It is not fully understood, but it is now part of the official record. Anyone following will see what you saw—and how you classified it.
+&lt;silently&gt;
+  &lt;&lt;set $garpAccountability = true&gt;&gt;
+  &lt;&lt;set $garpCompliance = true&gt;&gt;
+  &lt;&lt;set $usedFungalPath = true&gt;&gt;&lt;/silently&gt;
+[[Continue|Mushroom_Reflection]]
+</tw-passagedata><tw-passagedata pid="62" name="Mushroom_Photo" tags="" position="1625,675" size="100,100">You document the growth with precision: photos, scale markers, location data, even atmospheric readings. This is a solid local record—and one that could shift how Choral understands biological interaction with degraded tech.
+&lt;silently&gt;
+  &lt;&lt;set $garpIntegrity = true&gt;&gt;
+  &lt;&lt;set $garpAvailability = true&gt;&gt;
+  &lt;&lt;set $usedFungalPath = true&gt;&gt;
+&lt;/silently&gt;
+[[Continue|Mushroom_Reflection]]
+</tw-passagedata><tw-passagedata pid="63" name="Mushroom_Seal" tags="" position="1900,750" size="100,100">You isolate the zone and tag it for future fieldwork. You are not risking corruption or misclassification on your watch. There is no data right now—but no new damage either.
+&lt;silently&gt;
+  &lt;&lt;set $garpProtection = true&gt;&gt;
+  &lt;&lt;set $garpCompliance = true&gt;&gt;
+  &lt;&lt;set $usedFungalPath = true&gt;&gt;
+&lt;/silently&gt;
+[[Continue|Mushroom_Reflection]]
+</tw-passagedata><tw-passagedata pid="64" name="Mushroom_Bad" tags="" position="1600,800" size="100,100">You collect a sample, jot a few notes, and mark it for later transmit it upstream with no context. Fast. Efficient. Totally unauditable. If this goes wrong later, no one will know where the hell it came from.
+&lt;silently&gt;
+  &lt;&lt;set $garpAvailability = true&gt;&gt;
+  &lt;&lt;set $usedFungalPath = true&gt;&gt;
+&lt;/silently&gt;
+[[Continue|Mushroom_Reflection]]
+</tw-passagedata><tw-passagedata pid="65" name="Mushroom_Reflection" tags="" position="1750,875" size="100,100">&lt;&lt;switch $mushroomChoice&gt;&gt;
+  &lt;&lt;case &quot;Log&quot;&gt;&gt;
+You prioritized &lt;span class=&quot;garp-accountability&quot;&gt;Accountability&lt;/span&gt; and &lt;span class=&quot;garp-compliance&quot;&gt;Compliance&lt;/span&gt;. You flagged the anomaly, tagged it with coordinates, and entered it into the system. It’s not complete, but it’s traceable. You didn’t capture conditions or contain the spread, so &lt;span class=&quot;garp-integrity&quot;&gt;Integrity&lt;/span&gt; and &lt;span class=&quot;garp-protection&quot;&gt;Protection&lt;/span&gt; are weaker.
+  &lt;&lt;case &quot;Photo&quot;&gt;&gt;
+You prioritized &lt;span class=&quot;garp-integrity&quot;&gt;Integrity&lt;/span&gt; and &lt;span class=&quot;garp-availability&quot;&gt;Availability&lt;/span&gt;. You documented everything with precision: location, timestamp, growth data. It’s auditable and reusable. But you didn’t isolate the risk, so &lt;span class=&quot;garp-protection&quot;&gt;Protection&lt;/span&gt; and &lt;span class=&quot;garp-compliance&quot;&gt;Compliance&lt;/span&gt; were deprioritized.
+  &lt;&lt;case &quot;Seal&quot;&gt;&gt;
+You prioritized &lt;span class=&quot;garp-protection&quot;&gt;Protection&lt;/span&gt; and &lt;span class=&quot;garp-compliance&quot;&gt;Compliance&lt;/span&gt;. You blocked transmission, isolated the site, and flagged it for future review. Nothing gets through without vetting. That means &lt;span class=&quot;garp-availability&quot;&gt;Availability&lt;/span&gt; and &lt;span class=&quot;garp-transparency&quot;&gt;Transparency&lt;/span&gt; took a hit—there’s no usable record yet.
+  &lt;&lt;case &quot;Bad&quot;&gt;&gt;
+You didn’t prioritize &lt;span class=&quot;garp-accountability&quot;&gt;Accountability&lt;/span&gt;. You took a sample and pushed it upstream with no context, no source, and no justification. That puts &lt;span class=&quot;garp-integrity&quot;&gt;Integrity&lt;/span&gt; and &lt;span class=&quot;garp-protection&quot;&gt;Protection&lt;/span&gt; at risk. If it goes bad, no one will know why.
+&lt;&lt;/switch&gt;&gt;
+&lt;&lt;if !$usedRawSync and !$usedPatchSync&gt;&gt;
+If you want to transmit any of this information, you have to connect Suzamen back to the Choral network.  
+How do you wish to proceed?  
+&lt;&lt;link &quot;Push a full sync using the terminal anyway&quot;&gt;&gt;&lt;&lt;set $usedRawSync = true&gt;&gt;&lt;&lt;goto &quot;GARP1_UseAnyway&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;  
+&lt;&lt;link &quot;Tag what’s reliable and submit a partial sync&quot;&gt;&gt;&lt;&lt;set $usedPatchSync = true&gt;&gt;&lt;&lt;goto &quot;GARP1_PatchSync&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;else&gt;&gt;
+You already chose a sync method. Ready to review what you’ve learned?  
+[[Continue|GARP1_Quiz]]
+&lt;&lt;/if&gt;&gt;
 </tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
