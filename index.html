@@ -289,6 +289,27 @@ button:hover {
   color: #aaa;
   font-style: italic;
 }
+/* === Retention Review Quiz Styles === */
+.retention-quiz-block {
+  margin: 0.4em 0;
+  padding: 0;
+  line-height: 1em;
+}
+
+.retention-label {
+  display: block;
+  font-weight: 600;
+  margin: 0 0 0.2em 0;
+}
+
+.retention-select {
+  display: block;
+  font-size: 0.95em;
+  height: 1.5em;
+  line-height: 1em;
+  padding: 0.1em 0.4em;
+  margin-top: 0.1em;
+}
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Access" tags="" position="1375,250" size="100,100">&lt;&lt;silently&gt;&gt;&lt;&lt;set $seenAccess = true&gt;&gt;&lt;&lt;/silently&gt;&gt;
 This system doesn’t enforce any access controls. No login screen. No user profiles. You’re in because you touched it.  
 There’s no guarantee that future access won’t be anonymous, untraceable, and completely unrestricted. Which means anyone—from a freight runner to a bored teenager—could overwrite, delete, or create records without authorization.  
@@ -365,13 +386,9 @@ Something pale and spongy is growing between the vents—fungal spread, probably
 
 Your field notes flag this version of Choral OS as unstable and noncompliant—especially when it comes to audit trails, validation, and data retention.
 
-But the terminal isn’t fully dead. It’s been quietly broadcasting a local distress packet—logs, business stubs, residential tags, infrastructure pings—all jumbled and going nowhere.  
+But the terminal isn’t fully dead. It’s been quietly broadcasting a local distress packet—logs, business stubs, residential tags, infrastructure pings—all jumbled and going nowhere. Your portable picks it up. Unlike the terminal, your device is still connected to the Choral network You could relay the packet upstream—get Suzamen back on the map, officially. It will not be clean. It will not be verifiable. But it will be received.
 
-Your portable picks it up. Unlike the terminal, your device is still connected to the Choral network You could relay the packet upstream—get Suzamen back on the map, officially.
-
-It will not be clean. It will not be verifiable. But it will be received.
-
-&lt;strong&gt;Before you commit, flag any issues you notice with the terminal.&lt;/strong&gt;
+&lt;strong&gt;Before you commit, explore the issues you notice with the terminal.&lt;/strong&gt;
 
 [[This system may not maintain an audit trail|Audit]] &lt;&lt;if $seenAudit&gt;&gt;✅&lt;&lt;/if&gt;&gt;  
 [[Data entered may not meet current accepted Choral standards|Standards]] &lt;&lt;if $seenStandards&gt;&gt;✅&lt;&lt;/if&gt;&gt;  
@@ -427,52 +444,51 @@ An elder named Ela meets you at the old road marker. They&#39;re holding a fragm
 [[Survey the area manually|Survey]]</tw-passagedata><tw-passagedata pid="7" name="Case 02" tags="" position="225,925" size="100,100"></tw-passagedata><tw-passagedata pid="8" name="Check out the fungal activity" tags="" position="1825,525" size="100,100">&lt;img src=&quot;https://i.postimg.cc/3RwdyrbZ/a-swampy-planets-infrastructure-is-destroyed-by-a-storm-we-are-standing-in-a-partially-intact-citize.jpg&quot; alt=&quot;Damaged Citizenry Office with fungal growth&quot; style=&quot;max-width:100%; height:auto; border-radius:0.5em; margin-bottom:1em;&quot;&gt;
 The mushrooms are not just thriving—they&#39;re interfacing. Spongy caps bloom from old conduit lines, and mycelial filaments glisten across charred metal and junction boards, feeding on residual charge like it was engineered for them.
 You take a closer look. The growth is uneven, but spore activity is higher near thermal vents, and you notice one port with visibly warped internal shielding. It’s possible the fungi are embedding spores in aging record carriers. There’s a box of backup media here—optical, magnetic, hybrid formats—and several are visibly compromised.
-You suspect this is where the spore network started. Some of the records might still be readable, but if you connect the wrong one, you risk contaminating your portable. but there&#39;s a pattern: clusters near core junctions, bioluminescent pulses that almost seem rhythmic.
+You suspect this is where the spore network started. Some of the records might still be readable, but if you connect the wrong one, you risk contaminating your portable. But there&#39;s a pattern: clusters near core junctions, bioluminescent pulses that almost seem rhythmic.
 You could walk away, call it a curiosity—but this might be a local infrastructure-adjacent system no one ever documented. Or it might be dangerous. Someone needs to record this. The question is how.
 
-&lt;strong&gt;Click each option to learn more:&lt;/strong&gt;
+&lt;strong&gt;Click each option to learn more:&lt;/strong&gt;&lt;br&gt;
 [[Log the fungal anomalies|Mushroom_Log]] &lt;&lt;if $viewedLog&gt;&gt;✅&lt;&lt;/if&gt;&gt;  
 [[Quarantine the area|Mushroom_Seal]] &lt;&lt;if $viewedSeal&gt;&gt;✅&lt;&lt;/if&gt;&gt;  
 [[Take photographs|Mushroom_Photo]] &lt;&lt;if $viewedPhoto&gt;&gt;✅&lt;&lt;/if&gt;&gt;  
 [[Grab a sample and GTFO|Mushroom_Bad]] &lt;&lt;if $viewedBad&gt;&gt;✅&lt;&lt;/if&gt;&gt;  
 
 &lt;&lt;if $viewedLog and $viewedSeal and $viewedPhoto and $viewedBad&gt;&gt;
-
 &lt;hr&gt;
-&lt;strong&gt;You’ve reviewed the options. What do you want to do?&lt;/strong&gt;
-&lt;select id=&quot;mushroomChoice&quot;&gt;
+&lt;strong&gt;You’ve reviewed the options. What do you want to do?&lt;/strong&gt;&lt;br&gt;
+&lt;select id=&quot;mushroomChoice&quot; class=&quot;record-select&quot;&gt;
   &lt;option value=&quot;log&quot;&gt;Log the anomaly&lt;/option&gt;
   &lt;option value=&quot;seal&quot;&gt;Quarantine the zone&lt;/option&gt;
   &lt;option value=&quot;photo&quot;&gt;Photograph everything&lt;/option&gt;
   &lt;option value=&quot;bad&quot;&gt;Grab a sample and GTFO&lt;/option&gt;
   &lt;option value=&quot;&quot;&gt;— Select an action —&lt;/option&gt;
 &lt;/select&gt;
-
-&lt;button onclick=&quot;submitMushroomChoice()&quot;&gt;Submit&lt;/button&gt;
+&lt;br&gt;
+&lt;button onclick=&quot;submitMushroomChoice()&quot; class=&quot;record-quiz-submit&quot;&gt;Submit&lt;/button&gt;
 
 &lt;script&gt;
 function submitMushroomChoice() {
   const choice = document.getElementById(&quot;mushroomChoice&quot;).value;
   switch (choice) {
     case &quot;log&quot;:
-      Engine.play(&quot;Mushroom_Log_Commit&quot;);
+      SugarCube.Engine.play(&quot;Mushroom_Log_Commit&quot;);
       break;
     case &quot;seal&quot;:
-      Engine.play(&quot;Mushroom_Seal_Commit&quot;);
+      SugarCube.Engine.play(&quot;Mushroom_Seal_Commit&quot;);
       break;
     case &quot;photo&quot;:
-      Engine.play(&quot;Mushroom_Photo_Commit&quot;);
+      SugarCube.Engine.play(&quot;Mushroom_Photo_Commit&quot;);
       break;
     case &quot;bad&quot;:
-      Engine.play(&quot;Mushroom_Bad_Commit&quot;);
+      SugarCube.Engine.play(&quot;Mushroom_Bad_Commit&quot;);
       break;
     default:
       alert(&quot;Please select an action before proceeding.&quot;);
   }
 }
 &lt;/script&gt;
-
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="Contract Answer" tags="" position="700,700" size="100,100">&lt;&lt;silently&gt;&gt;&lt;&lt;set $viewedContract = true&gt;&gt;&lt;&lt;/silently&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+</tw-passagedata><tw-passagedata pid="9" name="Contract Answer" tags="" position="700,700" size="100,100">&lt;&lt;silently&gt;&gt;&lt;&lt;set $viewedContract = true&gt;&gt;&lt;&lt;/silently&gt;&gt;
 ✔️The signed contract is a record. It documents a formal agreement—who was involved, what was promised, and when it happened.
 
 [[Back|What is a record?]]</tw-passagedata><tw-passagedata pid="10" name="Corven Reflection" tags="" position="325,475" size="100,100">You submitted a placeholder record. The system accepted it. Corven is visible again.  
@@ -736,7 +752,8 @@ Every record has a life. It is born (created) or received, it works (used), it r
   &lt;li&gt;&lt;strong&gt;Storage:&lt;/strong&gt; It’s no longer needed for daily use, but must be kept.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Disposition:&lt;/strong&gt; It’s either destroyed or formally archived.&lt;/li&gt;
 &lt;/ol&gt;
-[[An example for Earthlings|Lifecycle_Quiz]]</tw-passagedata><tw-passagedata pid="28" name="LifecycleQuizResult" tags="" position="700,925" size="100,100">&lt;&lt;if $lifecycleQuizCorrect&gt;&gt;
+[[An example for Earthlings|Lifecycle_Quiz]]</tw-passagedata><tw-passagedata pid="28" name="LifecycleQuizResult" tags="" position="700,925" size="100,100">&lt;strong&gt;Lifecycle Quiz Result&lt;/strong&gt;
+&lt;&lt;if $lifecycleQuizCorrect&gt;&gt;
 ✅ &lt;strong&gt;You nailed it!&lt;/strong&gt; The record lived a full and proper life.&lt;br&gt;
 &lt;ul&gt;
   &lt;li&gt;📥 Received → &lt;strong&gt;Creation&lt;/strong&gt;&lt;/li&gt;
@@ -755,7 +772,7 @@ Every record has a life. It is born (created) or received, it works (used), it r
   &lt;li&gt;&lt;strong&gt;Storage:&lt;/strong&gt; Kept for future use&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Disposition:&lt;/strong&gt; Securely destroyed or archived&lt;/li&gt;
 &lt;/ul&gt;
-&lt;&lt;link &quot;Retry&quot;&gt;&gt;&lt;&lt;goto &quot;An example for Earthlings&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;Retry&quot;&gt;&gt;&lt;&lt;goto &quot;Lifecycle_Quiz&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="Mission Briefing" tags="" position="975,125" size="100,100">&lt;strong&gt;Restoring Suzamen&lt;/strong&gt;
 
 Suzamen wasn’t worth the paperwork—until trade started slipping through its back channels, dodging Choral tariffs on the way to richer ports. Now, all of a sudden, there’s interest. Suzamen needs to be brought back into “formal compliance.” It needs reconnection. Documentation. Taxable legitimacy.
@@ -764,13 +781,9 @@ Suzamen wasn’t worth the paperwork—until trade started slipping through its 
 &lt;/div&gt;
 That’s where you come in. Not because you’re fully certified or the best—because you&#39;re not, and that&#39;s okay. You&#39;re available, quick on your feet, and the Choral assumes a rookie record manager can&#39;t possibly wreck anything that wasn’t already broken--and they consider Suzamen to be in utter shambles.
 
-They’re not looking for perfection. They’re looking for plausible oversight, stamped and dated.
+They’re not looking for perfection. They’re looking for plausible oversight, stamped and dated. You? You’re here to make Suzamen governable. Or at least organized enough to invoice.
 
-You? You’re here to make Suzamen look governable.
-
-Or at least just organized enough to invoice.
-
-[[Board the landing shuttle|Set down in Suzamen]]</tw-passagedata><tw-passagedata pid="30" name="Move on" tags="" position="2100,1050" size="100,100">The giant mushrooms are starting to freak you out. Why are they everywhere? You decide to investigate.
+[[Board the landing shuttle|Set down in Suzamen]]</tw-passagedata><tw-passagedata pid="30" name="Move on" tags="" position="2100,1075" size="100,100">The giant mushrooms are starting to freak you out. Why are they everywhere? You decide to investigate.
 
 [[Check out the fungal activity]]</tw-passagedata><tw-passagedata pid="31" name="MurraReflectionQ1" tags="" position="175,450" size="100,100">You submitted a reconstruction based on local memory.  
 The system accepted it, but flagged a nonstandard format warning.  
@@ -816,19 +829,21 @@ You did not prioritize &lt;span class=&quot;garp-accountability&quot;&gt;Account
 
 &lt;&lt;if $usedRawSync or $usedPatchSync&gt;&gt;
   [[Move on|GARPQuizBridge]]
-&lt;&lt;elseif $usedFungalPath&gt;&gt;
-  If you want to transmit any of this information, you have to connect Suzamen back to the Choral network.
-  &lt;strong&gt;How do you wish to proceed?&lt;/strong&gt;
-  &lt;&lt;link &quot;Push a full sync using the terminal anyway&quot;&gt;&gt;
-    &lt;&lt;set $usedRawSync = true&gt;&gt;
-    &lt;&lt;goto &quot;GARP1_UseAnyway&quot;&gt;&gt;
-  &lt;&lt;/link&gt;&gt;
-  &lt;&lt;link &quot;Tag what’s reliable and submit a partial sync&quot;&gt;&gt;
-    &lt;&lt;set $usedPatchSync = true&gt;&gt;
-    &lt;&lt;goto &quot;GARP1_PatchSync&quot;&gt;&gt;
-  &lt;&lt;/link&gt;&gt;
-&lt;&lt;/elseif&gt;&gt;
-</tw-passagedata><tw-passagedata pid="37" name="Mushroom_Seal" tags="" position="2050,675" size="100,100">You can isolate the area, designate it as a spore-contaminated hazard site, and file a low-priority field review request. The mushrooms seem happy. That makes one of you--who knows what you just breathed in? You could be an alien mushroom&#39;s new human host. That image flashes in your mind 
+&lt;&lt;else&gt;&gt;
+  &lt;&lt;if $usedFungalPath&gt;&gt;
+    If you want to transmit any of this information, you have to connect Suzamen back to the Choral network.
+    &lt;strong&gt;How do you wish to proceed?&lt;/strong&gt;
+    &lt;&lt;link &quot;Push a full sync using the terminal anyway&quot;&gt;&gt;
+      &lt;&lt;set $usedRawSync = true&gt;&gt;
+      &lt;&lt;goto &quot;GARP1_UseAnyway&quot;&gt;&gt;
+    &lt;&lt;/link&gt;&gt;
+    &lt;&lt;link &quot;Tag what’s reliable and submit a partial sync&quot;&gt;&gt;
+      &lt;&lt;set $usedPatchSync = true&gt;&gt;
+      &lt;&lt;goto &quot;GARP1_PatchSync&quot;&gt;&gt;
+    &lt;&lt;/link&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+</tw-passagedata><tw-passagedata pid="37" name="Mushroom_Seal" tags="" position="2050,625" size="100,100">You can isolate the area, designate it as a spore-contaminated hazard site, and file a low-priority field review request. The mushrooms seem happy. That makes one of you--who knows what you just breathed in? You could be an alien mushroom&#39;s new human host. That image flashes in your mind 
 &lt;div class=&quot;intake-image-container&quot;&gt;
   &lt;img src=&quot;https://i.postimg.cc/brV3bwBb/a-surreal-science-fiction-portrait-of-a-human-partially-transformed-into-a-mushroom-based-hybrid-org.jpg&quot; alt=&quot;Hallucination of yourself as a mushroom-human hybrid&quot; class=&quot;intake-image&quot;&gt;
 &lt;/div&gt;
@@ -982,7 +997,7 @@ You&#39;re standing in what’s left of it—a ruin with ambition. The walls are
 
 The last storm took out their uplink. Again. It also took out people, homes, and businesses, but that’s more of a local issue.
 
-Your job is to reestablish just enough record integrity, availability, and accountability to justify pulling them back into the Choral network. No one expects a miracle—they expect just enough governance to justify the invoice.
+Your job is to reestablish just enough record integrity, availability, and accountability to justify pulling them back into the Choral network. No one expects a miracle—they want Suzamen back online and active in the system so Choral can direct the development of the planet from a black market in a back alley to a legitimate, taxable trading post that specializes in rare and unique (read: legally questionable) products.
 
 There’s a terminal tucket behind a wall, its screen still glowing, although it is smeared and marked with what looks like half a bootprint. It might still work.
 
@@ -1117,7 +1132,8 @@ Please proceed to your assigned scanner station.
 
 [[Proceed to scanner]]
 [[Case 01]]
-[[Lifecycle_Quiz]] </tw-passagedata><tw-passagedata pid="56" name="The packet goes through" tags="" position="1550,575" size="100,100">Suzamen Port lights up again in the network—no longer flagged as “pending” or “nonresponsive,” but active, aligned, technically reachable. Not important, necessarily, but no longer ignorable.
+[[Check out the fungal activity]] 
+[[GARP_Scenario1_Decision]] </tw-passagedata><tw-passagedata pid="56" name="The packet goes through" tags="" position="1550,575" size="100,100">Suzamen Port lights up again in the network—no longer flagged as “pending” or “nonresponsive,” but active, aligned, technically reachable. Not important, necessarily, but no longer ignorable.
 
 That’s all it takes.
 &lt;div class=&quot;map-container&quot;&gt;
@@ -1213,140 +1229,205 @@ Whether you are welcomed or warned off will depend on what they’ve heard.
 
 [[Continue|Case 02]]</tw-passagedata><tw-passagedata pid="63" name="Record Review Exercise" tags="" position="1400,475" size="100,100">&lt;style&gt;
   #retentionForm {
-    font-size: 0.95em;
-    line-height: 1.2em;
+    font-size: 1em;
+    line-height: 1em;
+    margin-top: 0.2em;
   }
+
   .record-item {
-    margin: 0.4em 0;
+    margin: 0.6em 0 0.4em 0;
   }
+
+  .record-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.1em;
+  }
+
   .record-item select {
-    margin-top: 0.1em;
+    font-size: 0.9em;
+    height: 1.5em;
+    line-height: 1em;
+    padding: 0.05em 0.4em;
+    margin-top: 0.2em;
+  }
+
+  button[type=&quot;button&quot;] {
+    margin-top: 0.8em;
+    font-size: 0.9em;
   }
 &lt;/style&gt;
 
 &lt;form id=&quot;retentionForm&quot;&gt;
   &lt;p&gt;&lt;strong&gt;REVIEW REQUIRED: Select how to handle each attached record.&lt;/strong&gt;&lt;/p&gt;
-
   &lt;div class=&quot;record-item&quot;&gt;
-    📮 Complaint: “Port toilet has weird smell,” filed 12 years ago:
-    &lt;br&gt;&lt;select id=&quot;toiletComplaint&quot;&gt;
+    &lt;span class=&quot;record-label&quot;&gt;📮 &lt;strong&gt;Complaint&lt;/strong&gt;: “Port toilet has weird smell,” filed 12 years ago:&lt;/span&gt;
+    &lt;select id=&quot;toiletComplaint&quot;&gt;
       &lt;option value=&quot;retain&quot;&gt;Retain&lt;/option&gt;
       &lt;option value=&quot;flag&quot;&gt;Flag&lt;/option&gt;
       &lt;option value=&quot;dispose&quot;&gt;Dispose&lt;/option&gt;
-      &lt;option value=&quot;&quot;&gt;— Select —&lt;/option&gt;
+      &lt;option value=&quot;&quot; selected&gt;— Select —&lt;/option&gt;
     &lt;/select&gt;
   &lt;/div&gt;
-
   &lt;div class=&quot;record-item&quot;&gt;
-    🛠️ Duplicate backup of the Port’s old holiday schedule:
-    &lt;br&gt;&lt;select id=&quot;holidaySchedule&quot;&gt;
+    &lt;span class=&quot;record-label&quot;&gt;🛠️ &lt;strong&gt;Duplicate backup&lt;/strong&gt; of the Port’s old holiday schedule:&lt;/span&gt;
+    &lt;select id=&quot;holidaySchedule&quot;&gt;
       &lt;option value=&quot;retain&quot;&gt;Retain&lt;/option&gt;
       &lt;option value=&quot;flag&quot;&gt;Flag&lt;/option&gt;
       &lt;option value=&quot;dispose&quot;&gt;Dispose&lt;/option&gt;
-      &lt;option value=&quot;&quot;&gt;— Select —&lt;/option&gt;
+      &lt;option value=&quot;&quot; selected&gt;— Select —&lt;/option&gt;
     &lt;/select&gt;
   &lt;/div&gt;
-
   &lt;div class=&quot;record-item&quot;&gt;
-    📋 Medical triage record created yesterday:
-    &lt;br&gt;&lt;select id=&quot;medicalRecord&quot;&gt;
+    &lt;span class=&quot;record-label&quot;&gt;📋 &lt;strong&gt;Medical triage record&lt;/strong&gt; created yesterday:&lt;/span&gt;
+    &lt;select id=&quot;medicalRecord&quot;&gt;
       &lt;option value=&quot;retain&quot;&gt;Retain&lt;/option&gt;
       &lt;option value=&quot;flag&quot;&gt;Flag&lt;/option&gt;
       &lt;option value=&quot;dispose&quot;&gt;Dispose&lt;/option&gt;
-      &lt;option value=&quot;&quot;&gt;— Select —&lt;/option&gt;
+      &lt;option value=&quot;&quot; selected&gt;— Select —&lt;/option&gt;
     &lt;/select&gt;
   &lt;/div&gt;
-
   &lt;div class=&quot;record-item&quot;&gt;
-    📜 Census log: population count from 92 years ago:
-    &lt;br&gt;&lt;select id=&quot;censusLog&quot;&gt;
+    &lt;span class=&quot;record-label&quot;&gt;📜 &lt;strong&gt;Census log&lt;/strong&gt;: population count from 92 years ago:&lt;/span&gt;
+    &lt;select id=&quot;censusLog&quot;&gt;
       &lt;option value=&quot;retain&quot;&gt;Retain&lt;/option&gt;
       &lt;option value=&quot;flag&quot;&gt;Flag&lt;/option&gt;
       &lt;option value=&quot;dispose&quot;&gt;Dispose&lt;/option&gt;
-      &lt;option value=&quot;&quot;&gt;— Select —&lt;/option&gt;
+      &lt;option value=&quot;&quot; selected&gt;— Select —&lt;/option&gt;
     &lt;/select&gt;
   &lt;/div&gt;
-
   &lt;div class=&quot;record-item&quot;&gt;
-    🧾 Unsigned stimroot requisition (origin unclear):
-    &lt;br&gt;&lt;select id=&quot;stimrootForm&quot;&gt;
+    &lt;span class=&quot;record-label&quot;&gt;🧾 &lt;strong&gt;Unsigned stimroot requisition&lt;/strong&gt; (origin unclear):&lt;/span&gt;
+    &lt;select id=&quot;stimrootForm&quot;&gt;
       &lt;option value=&quot;retain&quot;&gt;Retain&lt;/option&gt;
       &lt;option value=&quot;flag&quot;&gt;Flag&lt;/option&gt;
       &lt;option value=&quot;dispose&quot;&gt;Dispose&lt;/option&gt;
-      &lt;option value=&quot;&quot;&gt;— Select —&lt;/option&gt;
+      &lt;option value=&quot;&quot; selected&gt;— Select —&lt;/option&gt;
     &lt;/select&gt;
   &lt;/div&gt;
-
   &lt;div class=&quot;record-item&quot;&gt;
-    📦 Active power grid schematics (updated 3 months ago):
-    &lt;br&gt;&lt;select id=&quot;gridSchematics&quot;&gt;
+    &lt;span class=&quot;record-label&quot;&gt;📦 &lt;strong&gt;Active power grid schematics&lt;/strong&gt; (updated 3 months ago):&lt;/span&gt;
+    &lt;select id=&quot;gridSchematics&quot;&gt;
       &lt;option value=&quot;retain&quot;&gt;Retain&lt;/option&gt;
       &lt;option value=&quot;flag&quot;&gt;Flag&lt;/option&gt;
       &lt;option value=&quot;dispose&quot;&gt;Dispose&lt;/option&gt;
-      &lt;option value=&quot;&quot;&gt;— Select —&lt;/option&gt;
+      &lt;option value=&quot;&quot; selected&gt;— Select —&lt;/option&gt;
     &lt;/select&gt;
   &lt;/div&gt;
-
   &lt;button type=&quot;button&quot; onclick=&quot;submitRetention()&quot;&gt;Submit&lt;/button&gt;
 &lt;/form&gt;
 
 &lt;script&gt;
-function submitRetention() {
-  SugarCube.State.variables.gridSchematics = document.getElementById(&quot;gridSchematics&quot;).value;
-  SugarCube.State.variables.censusLog = document.getElementById(&quot;censusLog&quot;).value;
-  SugarCube.State.variables.toiletComplaint = document.getElementById(&quot;toiletComplaint&quot;).value;
-  SugarCube.State.variables.medicalRecord = document.getElementById(&quot;medicalRecord&quot;).value;
-  SugarCube.State.variables.stimrootForm = document.getElementById(&quot;stimrootForm&quot;).value;
-  SugarCube.State.variables.holidaySchedule = document.getElementById(&quot;holidaySchedule&quot;).value;
-
-  SugarCube.Engine.play(&quot;Retention_Results&quot;);
-}
+  function submitRetention() {
+    SugarCube.State.variables.gridSchematics = document.getElementById(&quot;gridSchematics&quot;).value;
+    SugarCube.State.variables.censusLog = document.getElementById(&quot;censusLog&quot;).value;
+    SugarCube.State.variables.toiletComplaint = document.getElementById(&quot;toiletComplaint&quot;).value;
+    SugarCube.State.variables.medicalRecord = document.getElementById(&quot;medicalRecord&quot;).value;
+    SugarCube.State.variables.stimrootForm = document.getElementById(&quot;stimrootForm&quot;).value;
+    SugarCube.State.variables.holidaySchedule = document.getElementById(&quot;holidaySchedule&quot;).value;
+    SugarCube.Engine.play(&quot;Retention_Results&quot;);
+  }
 &lt;/script&gt;
-</tw-passagedata><tw-passagedata pid="64" name="Retention_Results" tags="" position="1325,625" size="100,100">&lt;p&gt;You submitted your retention decisions. Here&#39;s how they align with Choral protocol:&lt;/p&gt;
+</tw-passagedata><tw-passagedata pid="64" name="Retention_Results" tags="" position="1325,625" size="100,100">&lt;style&gt;
+  .results-container {
+    font-size: 1em;
+    line-height: 1em;
+    margin-top: 0.2em;
+  }
 
-&lt;div class=&quot;result-block&quot;&gt;
-  &lt;strong&gt;📦 Power grid schematics&lt;/strong&gt;&lt;br&gt;
-  Your answer: &lt;&lt;= $gridSchematics&gt;&gt;&lt;br&gt;
-  &lt;span&gt;✅ Correct – infrastructure records must be preserved.&lt;/span&gt;&lt;br&gt;
-  &lt;strong&gt;Correct answer:&lt;/strong&gt; retain
+  .result-item {
+    margin: 0.6em 0 0.4em 0;
+  }
+
+  .record-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.1em;
+  }
+
+  .correct {
+    color: #6fcf97;
+    font-size: 1em;
+    margin-top: 0.1em;
+  }
+
+  .incorrect {
+    color: #eb5757;
+    font-size: 1em;
+    margin-top: 0.1em;
+  }
+
+  .answer {
+    margin-top: 0.1em;
+    font-size: 1em;
+  }
+
+&lt;/style&gt;
+
+&lt;div class=&quot;results-container&quot;&gt;
+  You submitted your retention decisions. Here&#39;s how they align with Choral protocol:
+  &lt;div class=&quot;result-item&quot;&gt;
+    &lt;span class=&quot;record-label&quot;&gt;📮 &lt;strong&gt;Toilet smell complaint&lt;/strong&gt;&lt;/span&gt;
+    &lt;div class=&quot;answer&quot;&gt;Your answer: &lt;&lt;= $toiletComplaint &gt;&gt;&lt;/div&gt;
+    &lt;&lt;if $toiletComplaint == &quot;dispose&quot;&gt;&gt;
+      &lt;div class=&quot;correct&quot;&gt;✅ Correct – minor, expired issue.&lt;/div&gt;
+    &lt;&lt;else&gt;&gt;
+      &lt;div class=&quot;incorrect&quot;&gt;❌ Incorrect – minor, expired issue.&lt;/div&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;div class=&quot;answer&quot;&gt;&lt;strong&gt;Correct answer:&lt;/strong&gt; dispose&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;result-item&quot;&gt;
+    &lt;span class=&quot;record-label&quot;&gt;🛠️ &lt;strong&gt;Holiday schedule backup&lt;/strong&gt;&lt;/span&gt;
+    &lt;div class=&quot;answer&quot;&gt;Your answer: &lt;&lt;= $holidaySchedule &gt;&gt;&lt;/div&gt;
+    &lt;&lt;if $holidaySchedule == &quot;dispose&quot;&gt;&gt;
+      &lt;div class=&quot;correct&quot;&gt;✅ Correct – redundant backup, not needed.&lt;/div&gt;
+    &lt;&lt;else&gt;&gt;
+      &lt;div class=&quot;incorrect&quot;&gt;❌ Incorrect – redundant backup, not needed.&lt;/div&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;div class=&quot;answer&quot;&gt;&lt;strong&gt;Correct answer:&lt;/strong&gt; dispose&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;result-item&quot;&gt;
+    &lt;span class=&quot;record-label&quot;&gt;📋 &lt;strong&gt;Medical triage (yesterday)&lt;/strong&gt;&lt;/span&gt;
+    &lt;div class=&quot;answer&quot;&gt;Your answer: &lt;&lt;= $medicalRecord &gt;&gt;&lt;/div&gt;
+    &lt;&lt;if $medicalRecord == &quot;retain&quot;&gt;&gt;
+      &lt;div class=&quot;correct&quot;&gt;✅ Correct – medical data must be preserved.&lt;/div&gt;
+    &lt;&lt;else&gt;&gt;
+      &lt;div class=&quot;incorrect&quot;&gt;❌ Incorrect – medical data must be preserved.&lt;/div&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;div class=&quot;answer&quot;&gt;&lt;strong&gt;Correct answer:&lt;/strong&gt; retain&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;result-item&quot;&gt;
+    &lt;span class=&quot;record-label&quot;&gt;📜 &lt;strong&gt;Census log (92 years ago)&lt;/strong&gt;&lt;/span&gt;
+    &lt;div class=&quot;answer&quot;&gt;Your answer: &lt;&lt;= $censusLog &gt;&gt;&lt;/div&gt;
+    &lt;&lt;if $censusLog == &quot;flag&quot;&gt;&gt;
+      &lt;div class=&quot;correct&quot;&gt;✅ Correct – possible archival value.&lt;/div&gt;
+    &lt;&lt;else&gt;&gt;
+      &lt;div class=&quot;incorrect&quot;&gt;❌ Incorrect – possible archival value.&lt;/div&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;div class=&quot;answer&quot;&gt;&lt;strong&gt;Correct answer:&lt;/strong&gt; flag&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;result-item&quot;&gt;
+    &lt;span class=&quot;record-label&quot;&gt;🧾 &lt;strong&gt;Unsigned stimroot requisition&lt;/strong&gt;&lt;/span&gt;
+    &lt;div class=&quot;answer&quot;&gt;Your answer: &lt;&lt;= $stimrootForm &gt;&gt;&lt;/div&gt;
+    &lt;&lt;if $stimrootForm == &quot;flag&quot;&gt;&gt;
+      &lt;div class=&quot;correct&quot;&gt;✅ Correct – unclear origin, flag for review.&lt;/div&gt;
+    &lt;&lt;else&gt;&gt;
+      &lt;div class=&quot;incorrect&quot;&gt;❌ Incorrect – unclear origin, flag for review.&lt;/div&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;div class=&quot;answer&quot;&gt;&lt;strong&gt;Correct answer:&lt;/strong&gt; flag&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;result-item&quot;&gt;
+    &lt;span class=&quot;record-label&quot;&gt;📦 &lt;strong&gt;Power grid schematics&lt;/strong&gt;&lt;/span&gt;
+    &lt;div class=&quot;answer&quot;&gt;Your answer: &lt;&lt;= $gridSchematics &gt;&gt;&lt;/div&gt;
+    &lt;&lt;if $gridSchematics == &quot;retain&quot;&gt;&gt;
+      &lt;div class=&quot;correct&quot;&gt;✅ Correct – infrastructure records must be preserved.&lt;/div&gt;
+    &lt;&lt;else&gt;&gt;
+      &lt;div class=&quot;incorrect&quot;&gt;❌ Incorrect – infrastructure records must be preserved.&lt;/div&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;div class=&quot;answer&quot;&gt;&lt;strong&gt;Correct answer:&lt;/strong&gt; retain&lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div class=&quot;result-block&quot;&gt;
-  &lt;strong&gt;📜 Census log (92 years ago)&lt;/strong&gt;&lt;br&gt;
-  Your answer: &lt;&lt;= $censusLog&gt;&gt;&lt;br&gt;
-  &lt;span&gt;✅ Correct – possible archival value.&lt;/span&gt;&lt;br&gt;
-  &lt;strong&gt;Correct answer:&lt;/strong&gt; flag
-&lt;/div&gt;
-
-&lt;div class=&quot;result-block&quot;&gt;
-  &lt;strong&gt;📮 Toilet smell complaint&lt;/strong&gt;&lt;br&gt;
-  Your answer: &lt;&lt;= $toiletComplaint&gt;&gt;&lt;br&gt;
-  &lt;span&gt;✅ Correct – minor, expired issue.&lt;/span&gt;&lt;br&gt;
-  &lt;strong&gt;Correct answer:&lt;/strong&gt; dispose
-&lt;/div&gt;
-
-&lt;div class=&quot;result-block&quot;&gt;
-  &lt;strong&gt;📋 Medical triage (yesterday)&lt;/strong&gt;&lt;br&gt;
-  Your answer: &lt;&lt;= $medicalRecord&gt;&gt;&lt;br&gt;
-  &lt;span&gt;✅ Correct – medical data must be preserved.&lt;/span&gt;&lt;br&gt;
-  &lt;strong&gt;Correct answer:&lt;/strong&gt; retain
-&lt;/div&gt;
-
-&lt;div class=&quot;result-block&quot;&gt;
-  &lt;strong&gt;🧾 Stimroot requisition (unclear)&lt;/strong&gt;&lt;br&gt;
-  Your answer: &lt;&lt;= $stimrootForm&gt;&gt;&lt;br&gt;
-  &lt;span&gt;✅ Correct – unclear origin needs review.&lt;/span&gt;&lt;br&gt;
-  &lt;strong&gt;Correct answer:&lt;/strong&gt; flag
-&lt;/div&gt;
-
-&lt;div class=&quot;result-block&quot;&gt;
-  &lt;strong&gt;🛠️ Duplicate holiday schedule&lt;/strong&gt;&lt;br&gt;
-  Your answer: &lt;&lt;= $holidaySchedule&gt;&gt;&lt;br&gt;
-  &lt;span&gt;✅ Correct – redundant backup, not needed.&lt;/span&gt;&lt;br&gt;
-  &lt;strong&gt;Correct answer:&lt;/strong&gt; dispose
-&lt;/div&gt;
-
-[[Continue|The packet goes through]]</tw-passagedata><tw-passagedata pid="65" name="Untitled Passage" tags="" position="2300,150" size="100,100">Mushroom_Seal
+[[Continue|The packet goes through]] </tw-passagedata><tw-passagedata pid="65" name="Untitled Passage" tags="" position="2300,150" size="100,100">Mushroom_Seal
 &lt;silently&gt;
   &lt;&lt;set $garpProtection = true&gt;&gt;
   &lt;&lt;set $garpCompliance = true&gt;&gt;
@@ -1392,7 +1473,7 @@ It is a solid, reusable record. Not a full capture, but enough to flag the pheno
 That is &lt;span class=&quot;garp-integrity&quot;&gt;Integrity&lt;/span&gt;. That is &lt;span class=&quot;garp-availability&quot;&gt;Availability&lt;/span&gt;.
 
 [[Continue|Mushroom_Reflection]]
-</tw-passagedata><tw-passagedata pid="68" name="Mushroom_Seal_Commit" tags="" position="2050,800" size="100,100">&lt;silently&gt;
+</tw-passagedata><tw-passagedata pid="68" name="Mushroom_Seal_Commit" tags="" position="2050,750" size="100,100">&lt;silently&gt;
   &lt;&lt;set $garpProtection = true&gt;&gt;
   &lt;&lt;set $garpCompliance = true&gt;&gt;
   &lt;&lt;set $usedFungalPath = true&gt;&gt;&lt;/silently&gt;
