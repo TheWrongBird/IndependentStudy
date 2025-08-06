@@ -1236,7 +1236,13 @@ You send the packet through to the Choral network. It is traceable, intentional,
   &lt;&lt;for _cb range jQuery(&quot;input[name=&#39;patchItem&#39;]:checked&quot;).toArray()&gt;&gt;
     &lt;&lt;set $selectedPatchItems.push(_cb.value)&gt;&gt;
   &lt;&lt;/for&gt;&gt;
+  &lt;&lt;if $selectedPatchItems.length == 4&gt;&gt;
   &lt;&lt;goto &quot;PatchSync_Reflex&quot;&gt;&gt;
+  &lt;&lt;else&gt;&gt;
+  &lt;&lt;script&gt;&gt;
+  alert(&quot;Please select 4 items to sync and reestablish Suzamen&#39;s presence in the system.&quot;);
+  &lt;&lt;/script&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
 &lt;&lt;/button&gt;&gt;
 &lt;script&gt;
 $(document).ready(function () {
@@ -1399,6 +1405,46 @@ setup.checkLifecycleQuiz = function () {
   State.variables.lifecycleQuizCorrect = answers.every((val, i) =&gt; val === correct[i]); 
   Engine.play(&quot;LifecycleQuizResult&quot;); 
 };
+// === RECORD RETENTION QUIZ CHECKER ===
+window.setup.submitRetention = function () {
+  const correctAnswers = {
+    toiletComplaint: &quot;dispose&quot;,
+    holidaySchedule: &quot;dispose&quot;,
+    medicalRecord: &quot;retain&quot;,
+    censusLog: &quot;flag&quot;,
+    stimrootForm: &quot;flag&quot;,
+    gridSchematics: &quot;retain&quot;
+  };
+
+  let allCorrect = true;
+  let missing = false;
+
+  // Save user answers into State.variables for use in the results passage
+  for (const [id, correct] of Object.entries(correctAnswers)) {
+    const userAnswer = document.getElementById(id)?.value || &quot;&quot;;
+    State.variables[id] = userAnswer;
+
+    if (userAnswer === &quot;&quot;) {
+      missing = true;
+      allCorrect = false;
+    } else if (userAnswer !== correct) {
+      allCorrect = false;
+    }
+  }
+
+  if (missing) {
+    alert(&quot;Please answer all items before submitting.&quot;);
+    return;
+  }
+
+  if (!allCorrect) {
+    alert(&quot;One or more answers are incorrect. Please try again.&quot;);
+    return;
+  }
+
+  State.variables.retentionQuizPassed = true;
+  Engine.play(&quot;RetentionQuizResults&quot;);
+};
 
 &lt;&lt;/script&gt;&gt;
 
@@ -1455,7 +1501,7 @@ None of it is timestamped. None of it would hold up in audit. But it feels more 
 [[Submit both Corven and Murra as a conflicted record|Dual Submit]]  
 [[Submit Corven as the official record|Submit Corven]]</tw-passagedata><tw-passagedata pid="53" name="The Beginning" tags="" position="850,25" size="100,100">Greetings, Earthling refugee! Our sincerest condolences for the untimely demise of your planet, but do not panic—you are now under the protection of the Choral of Worlds, the largest loosely-coordinated governing body in the known universe. Congratulations on surviving long enough to be our problem.
 
-Refugees are granted citizenship based on merit. The Choral saved you from    
+Refugees are granted citizenship based on merit. The Choral saved you from a fiery doom on Earth--now it&#39;s time to show them you were worth the effort.  
 
 Your initial placement: Records Management, Work Group 3.  
 Your performance will be evaluated for future consideration.
@@ -1467,9 +1513,7 @@ Please proceed to your assigned scanner station.
 &lt;/div&gt;
 
 [[Proceed to scanner]]
-[[Case 01]] 
-[[GARP_Scenario1_Decision]] 
-[[Begin GARP Quiz]] </tw-passagedata><tw-passagedata pid="54" name="The packet goes through" tags="" position="1550,575" size="100,100">Suzamen Port lights up again in the network—no longer flagged as “pending” or “nonresponsive,” but active, aligned, technically reachable. Not important, necessarily, but no longer ignorable.
+</tw-passagedata><tw-passagedata pid="54" name="The packet goes through" tags="" position="1550,575" size="100,100">Suzamen Port lights up again in the network—no longer flagged as “pending” or “nonresponsive,” but active, aligned, technically reachable. Not important, necessarily, but no longer ignorable.
 
 That’s all it takes.
 &lt;div class=&quot;map-container&quot;&gt;
@@ -1610,9 +1654,9 @@ Whether you are welcomed or warned off will depend on what they’ve heard.
       &lt;option value=&quot;&quot;&gt;— Select —&lt;/option&gt;
     &lt;/select&gt;
   &lt;/div&gt;
-  &lt;button type=&quot;button&quot; onclick=&quot;submitRetention()&quot;&gt;Submit&lt;/button&gt;
+  &lt;button type=&quot;button&quot; onclick=&quot;setup.submitRetention()&quot;&gt;Submit&lt;/button&gt;
 &lt;/form&gt;
-</tw-passagedata><tw-passagedata pid="62" name="Retention_Results" tags="" position="1325,625" size="100,100">&lt;style&gt;
+</tw-passagedata><tw-passagedata pid="62" name="RetentionQuizResults" tags="" position="1325,625" size="100,100">&lt;style&gt;
   .results-container {
     font-size: 1em;
     line-height: 1.05em;
@@ -1659,9 +1703,10 @@ Whether you are welcomed or warned off will depend on what they’ve heard.
 
 &lt;div class=&quot;results-container&quot;&gt;
   You submitted your retention decisions. Here&#39;s how they align with Choral protocol:
+
   &lt;div class=&quot;result-item&quot;&gt;
     &lt;span class=&quot;record-label&quot;&gt;📮 &lt;strong&gt;Toilet smell complaint&lt;/strong&gt;&lt;/span&gt;
-    &lt;div class=&quot;answer&quot;&gt;Your answer: &lt;&lt;= $toiletComplaint &gt;&gt;&lt;/div&gt;
+    &lt;div class=&quot;answer&quot;&gt;Your answer: &lt;&lt;print $toiletComplaint&gt;&gt;&lt;/div&gt;
     &lt;&lt;if $toiletComplaint == &quot;dispose&quot;&gt;&gt;
       &lt;div class=&quot;correct&quot;&gt;✅ Correct – minor, expired issue.&lt;/div&gt;
     &lt;&lt;else&gt;&gt;
@@ -1669,9 +1714,10 @@ Whether you are welcomed or warned off will depend on what they’ve heard.
     &lt;&lt;/if&gt;&gt;
     &lt;div class=&quot;answer&quot;&gt;&lt;strong&gt;Correct answer:&lt;/strong&gt; dispose&lt;/div&gt;
   &lt;/div&gt;
+
   &lt;div class=&quot;result-item&quot;&gt;
     &lt;span class=&quot;record-label&quot;&gt;🛠️ &lt;strong&gt;Holiday schedule backup&lt;/strong&gt;&lt;/span&gt;
-    &lt;div class=&quot;answer&quot;&gt;Your answer: &lt;&lt;= $holidaySchedule &gt;&gt;&lt;/div&gt;
+    &lt;div class=&quot;answer&quot;&gt;Your answer: &lt;&lt;print $holidaySchedule&gt;&gt;&lt;/div&gt;
     &lt;&lt;if $holidaySchedule == &quot;dispose&quot;&gt;&gt;
       &lt;div class=&quot;correct&quot;&gt;✅ Correct – redundant backup, not needed.&lt;/div&gt;
     &lt;&lt;else&gt;&gt;
@@ -1679,9 +1725,10 @@ Whether you are welcomed or warned off will depend on what they’ve heard.
     &lt;&lt;/if&gt;&gt;
     &lt;div class=&quot;answer&quot;&gt;&lt;strong&gt;Correct answer:&lt;/strong&gt; dispose&lt;/div&gt;
   &lt;/div&gt;
+
   &lt;div class=&quot;result-item&quot;&gt;
     &lt;span class=&quot;record-label&quot;&gt;📋 &lt;strong&gt;Medical triage (yesterday)&lt;/strong&gt;&lt;/span&gt;
-    &lt;div class=&quot;answer&quot;&gt;Your answer: &lt;&lt;= $medicalRecord &gt;&gt;&lt;/div&gt;
+    &lt;div class=&quot;answer&quot;&gt;Your answer: &lt;&lt;print $medicalRecord&gt;&gt;&lt;/div&gt;
     &lt;&lt;if $medicalRecord == &quot;retain&quot;&gt;&gt;
       &lt;div class=&quot;correct&quot;&gt;✅ Correct – medical data must be preserved.&lt;/div&gt;
     &lt;&lt;else&gt;&gt;
@@ -1689,9 +1736,10 @@ Whether you are welcomed or warned off will depend on what they’ve heard.
     &lt;&lt;/if&gt;&gt;
     &lt;div class=&quot;answer&quot;&gt;&lt;strong&gt;Correct answer:&lt;/strong&gt; retain&lt;/div&gt;
   &lt;/div&gt;
+
   &lt;div class=&quot;result-item&quot;&gt;
     &lt;span class=&quot;record-label&quot;&gt;📜 &lt;strong&gt;Census log (92 years ago)&lt;/strong&gt;&lt;/span&gt;
-    &lt;div class=&quot;answer&quot;&gt;Your answer: &lt;&lt;= $censusLog &gt;&gt;&lt;/div&gt;
+    &lt;div class=&quot;answer&quot;&gt;Your answer: &lt;&lt;print $censusLog&gt;&gt;&lt;/div&gt;
     &lt;&lt;if $censusLog == &quot;flag&quot;&gt;&gt;
       &lt;div class=&quot;correct&quot;&gt;✅ Correct – possible archival value.&lt;/div&gt;
     &lt;&lt;else&gt;&gt;
@@ -1699,9 +1747,10 @@ Whether you are welcomed or warned off will depend on what they’ve heard.
     &lt;&lt;/if&gt;&gt;
     &lt;div class=&quot;answer&quot;&gt;&lt;strong&gt;Correct answer:&lt;/strong&gt; flag&lt;/div&gt;
   &lt;/div&gt;
+
   &lt;div class=&quot;result-item&quot;&gt;
     &lt;span class=&quot;record-label&quot;&gt;🧾 &lt;strong&gt;Unsigned stimroot requisition&lt;/strong&gt;&lt;/span&gt;
-    &lt;div class=&quot;answer&quot;&gt;Your answer: &lt;&lt;= $stimrootForm &gt;&gt;&lt;/div&gt;
+    &lt;div class=&quot;answer&quot;&gt;Your answer: &lt;&lt;print $stimrootForm&gt;&gt;&lt;/div&gt;
     &lt;&lt;if $stimrootForm == &quot;flag&quot;&gt;&gt;
       &lt;div class=&quot;correct&quot;&gt;✅ Correct – unclear origin, flag for review.&lt;/div&gt;
     &lt;&lt;else&gt;&gt;
@@ -1709,9 +1758,10 @@ Whether you are welcomed or warned off will depend on what they’ve heard.
     &lt;&lt;/if&gt;&gt;
     &lt;div class=&quot;answer&quot;&gt;&lt;strong&gt;Correct answer:&lt;/strong&gt; flag&lt;/div&gt;
   &lt;/div&gt;
+
   &lt;div class=&quot;result-item&quot;&gt;
     &lt;span class=&quot;record-label&quot;&gt;📦 &lt;strong&gt;Power grid schematics&lt;/strong&gt;&lt;/span&gt;
-    &lt;div class=&quot;answer&quot;&gt;Your answer: &lt;&lt;= $gridSchematics &gt;&gt;&lt;/div&gt;
+    &lt;div class=&quot;answer&quot;&gt;Your answer: &lt;&lt;print $gridSchematics&gt;&gt;&lt;/div&gt;
     &lt;&lt;if $gridSchematics == &quot;retain&quot;&gt;&gt;
       &lt;div class=&quot;correct&quot;&gt;✅ Correct – infrastructure records must be preserved.&lt;/div&gt;
     &lt;&lt;else&gt;&gt;
